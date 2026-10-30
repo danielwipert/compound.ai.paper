@@ -1,0 +1,23 @@
+# Secrets (TS-6.4) — never commit
+.env
+.env.*
+!.env.example
+
+# Raw DataCo download is large; fetched by a download script (TS-2.1)
+data/raw/*
+!data/raw/.gitkeep
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+build/
+dist/
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store

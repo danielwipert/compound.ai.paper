@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "compound-ai-benchmark"
+version = "0.1.0"
+description = "Compound AI Architecture Benchmark: small open-weight models + deterministic Python bus vs tooled frontier model"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "pandas>=2.2",
+    "numpy>=1.26",
+    "pyarrow>=15",        # parquet files (ground_truth.parquet, TS-2.4)
+    "pydantic>=2.6",      # gates and schemas (TS-4.1, TS-5)
+    "pyyaml>=6",          # rename pool, note templates, config (TS-3)
+    "python-dotenv>=1",   # secrets from .env only (TS-6.4)
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[tool.setuptools.packages.find]
+include = ["src*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
