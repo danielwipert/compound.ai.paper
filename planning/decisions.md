@@ -1,0 +1,26 @@
+# Decisions Log — Compound AI Architecture Benchmark
+
+Append-only. Each entry: ID, date, decision, rationale, where it lives in the specs.
+Decisions are made one gate at a time (logic-gates method) and are not reopened without a new entry superseding the old one.
+
+| ID | Date | Decision | Why | Lives in |
+|----|------|----------|-----|----------|
+| D1 | 2026-10-29 | Three experimental arms. **Arm B (tooled monolith)** — frontier model with JSON-schema structured output plus code-execution tool — is the **control**. Arm A (naive single-prompt monolith) is reported as a secondary arm. Arm C is the compound system. | A naive monolith is a straw man; beating it only proves Python is better at arithmetic. The claim that survives review is "compound ties the tooled monolith on accuracy and beats it on cost." Arm A is kept because it produces the "why this matters" figure. | product-spec §3; tech-spec TS-4 |
+| D2 | 2026-10-29 | **Primary metrics are component-level**: field-mapping accuracy under schema drift, and extraction accuracy on unstructured carrier notes. **Halts are reported as coverage**, never folded into accuracy. End-to-end financial accuracy is a downstream metric. | The compound arm's financial math is Python, so 100% is tautological. Real risk lives in the small-model parsing nodes. A pipeline that halts on everything must not score 100%. | product-spec §4; tech-spec TS-7 |
+| D3 | 2026-10-29 | **Staged scale.** Pilot: 100 rows × 1 drift level (15%) × 5 seeds. Full matrix: 500 rows × 3 drift levels (5 / 15 / 30%) × 5 seeds. Only the full matrix goes in the paper. | 100 rows at one noise level gives overlapping confidence intervals and no degradation curve. The pilot validates the build cheaply; the full run produces defensible statistics. | product-spec §5; tech-spec TS-10 |
+| D4 | 2026-10-29 | **All compound nodes are hosted** (gateway: Hopscotch AI or OpenRouter). No local inference, no Docker. Each node has a declared fallback model; all calls use retry-with-backoff. | Author preference for cloud-only operation. Consequence: title/objective language shifts from "localized SLMs" to "small open-weight models." Fallbacks and backoff protect the 7,500-row full run from free-tier throttling. | product-spec §3.3; tech-spec TS-6 |
+| D5 | 2026-10-29 | **Compound-arm cost is reported in two columns**: actual spend (free tiers, near $0) and list-price equivalent (same open-weight models at paid hosted rates). | "Free tiers aren't a production cost model" is a one-line rebuttal; the list-price column pre-empts it. Both columns still beat the monolith by a wide margin. | product-spec §4; tech-spec TS-7.6 |
+| D6 | 2026-10-29 | **Pre-registration.** `docs/HYPOTHESES.md` (predicted direction per metric, not magnitude) and the analysis script are committed and git-tagged before the pilot runs. | Converts the original spec's pre-stated outcomes ("100% vs 85–92%") from advocacy into testable predictions. Matches Chorus spec-first discipline. | product-spec §6; tech-spec TS-9 |
+| D7 | 2026-10-29 | **Monolith models**: Claude Sonnet 5.5 plus OpenAI's current mid-tier equivalent. Exact OpenAI model ID locked at build time from the OpenRouter feed. | Mid-tier flagships are what enterprises deploy at volume, so the cost comparison is realistic. Fits budget; Claude side covered by Max plan API credits. | product-spec §3.1; tech-spec TS-6.1 |
+| D8 | 2026-10-29 | **Publication**: arXiv preprint (cs.AI or cs.SE); Zenodo DOI as fallback if no endorsement is secured by the time results are in. Endorsement sought early. | arXiv requires endorsement for first-time cs.* submitters. Zenodo gives a citable DOI without it. | product-spec §7; tech-spec TS-12 |
+| D9 | 2026-10-29 | **Mono-repo.** Specs live in `/docs` (`product-spec.md`, `tech-spec.md`, `decisions.md`, `HYPOTHESES.md`); code in `/src`, data in `/data`, outputs in `/results`, paper in `/paper`. | One URL for the launch posts; full trace from decision → hypothesis → code → result → paper. | product-spec §8; tech-spec TS-11 |
+
+## Open questions (not yet gated)
+
+| ID | Question | Notes |
+|----|----------|-------|
+| OQ-1 | Add further noise axes beyond schema drift + carrier notes (nulls, duplicate `Order Id`, currency/unit changes, column reordering)? | Would stress the Python bus itself and strengthen "deterministic ≠ infallible." Raises build scope. |
+| OQ-2 | Exact financial quantity for the "financial accuracy" metric. Original spec says `Sales − Benefit per order`. | DataCo "Benefit per order" is profit; `Sales − Benefit` is cost basis. Options: keep as-is and name it correctly; or use profit-ratio reconciliation (`Benefit / Sales` vs `Order Item Profit Ratio`). |
+| OQ-3 | Gateway choice: Hopscotch AI vs OpenRouter for compound nodes (and whether monoliths route through the same gateway via BYOK). | Hopscotch: zero markup, BYOK keeps Max credits usable. OpenRouter: larger free-tier catalogue, better known. Pilot can test one, full run the other. |
+| OQ-4 | Name for the compound-arm Node C synthesis model. Spec says "free-tier 7B." | Four-family diversity principle suggests Llama 8B. Confirm availability on chosen gateway. |
+| OQ-5 | Whether "MARL-EVAL" in the original spec refers to an external standard or an in-house protocol name. | If in-house, name it as Chorus's own. If external, cite it. |
