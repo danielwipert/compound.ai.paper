@@ -390,7 +390,7 @@ All metrics computed by `src/metrics/compute.py` from `ExceptionRecord` outputs 
 
 ### TS-7.4 Financial accuracy
 
-- Exact match (tolerance 1e-6) on `cost_basis`, `profit_ratio_recomputed`, `delay_days`; exact match on `risk_class`.
+- Match within half a unit of the rounded value (D12): ±0.005 on `cost_basis` (money, 2 dp); ±0.00005 on `profit_ratio_recomputed` (ratio, 4 dp); exact match on `delay_days` and `risk_class`. *(Originally: tolerance 1e-6; superseded by D12.)*
 - Reported per field. For Arm C this is 100% by construction on OK rows (TS-5.4); the paper states this and directs the reader to TS-7.1/7.2.
 - `OPEN OQ-2`: which field headlines.
 

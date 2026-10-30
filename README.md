@@ -6,7 +6,7 @@ Does a compound system of small open-weight models, bounded by a deterministic P
 - Engineering detail: [`docs/tech-spec.md`](docs/tech-spec.md)
 - Decision log: [`docs/decisions.md`](docs/decisions.md)
 
-**Status:** Phase 1 (Build): skeleton and data download done.
+**Status:** Phase 1 (Build): skeleton, data download and `finance.py` done.
 
 ## Setup
 
