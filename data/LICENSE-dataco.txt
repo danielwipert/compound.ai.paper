@@ -1,0 +1,26 @@
+DataCo SMART SUPPLY CHAIN FOR BIG DATA ANALYSIS (version 5)
+
+Authors:   Fabian Constante, Fernando Silva, António Pereira
+           (Instituto Politecnico de Leiria)
+Published: Mendeley Data, 2019-03-12
+DOI:       10.17632/8gx2fvg2k6.5
+URL:       https://data.mendeley.com/datasets/8gx2fvg2k6/5
+File used: DataCoSupplyChainDataset.csv
+SHA-256:   fa6d022ed437155e1a2f0378710602848703c8a7f203f7ff5d77805bf8480aa6
+
+Licence: Creative Commons Attribution 4.0 International (CC BY 4.0)
+         http://creativecommons.org/licenses/by/4.0
+
+Licence summary (as published on Mendeley Data):
+  You can share, copy and modify this dataset so long as you give appropriate
+  credit, provide a link to the CC BY license, and indicate if changes were
+  made, but you may not do so in a way that suggests the rights holder has
+  endorsed you or your use of the dataset. Note that further permission may
+  be required for any content within the dataset that is identified as
+  belonging to a third party.
+
+Changes made in this repository (src/data_prep.py):
+  - Re-encoded from latin-1 to UTF-8
+  - Kept 16 of 53 columns and renamed them to canonical field names (TS-2.2)
+  - Dates converted from "M/D/YYYY H:MM" to ISO "YYYY-MM-DDTHH:MM"
+  - Derived subsets (golden set, noised variants) built from the result

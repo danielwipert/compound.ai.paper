@@ -6,7 +6,7 @@ Does a compound system of small open-weight models, bounded by a deterministic P
 - Engineering detail: [`docs/tech-spec.md`](docs/tech-spec.md)
 - Decision log: [`docs/decisions.md`](docs/decisions.md)
 
-**Status:** Phase 1 (Build), project skeleton only.
+**Status:** Phase 1 (Build): skeleton and data download done.
 
 ## Setup
 
@@ -17,3 +17,15 @@ pip install -e ".[dev]"
 cp .env.example .env   # then add your API keys
 pytest
 ```
+
+## Get the data
+
+```bash
+python -m src.data_prep
+```
+
+This downloads the DataCo CSV (~96 MB) from Mendeley into `data/raw/`, checks its SHA-256 hash, and writes a clean 16-column UTF-8 copy to `data/raw/dataco_clean.csv`. Both files are git-ignored. Dataset licence: CC BY 4.0, see [`data/LICENSE-dataco.txt`](data/LICENSE-dataco.txt).
+
+## Licence
+
+Code: MIT, see [`LICENSE`](LICENSE).
