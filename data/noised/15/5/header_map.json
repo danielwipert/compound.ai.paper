@@ -1,0 +1,26 @@
+{
+  "level": 0.15,
+  "seed": 5,
+  "renamed": {
+    "Shipping time (promised)": "days_shipping_scheduled",
+    "rgn_cd": "order_region"
+  },
+  "header_map": {
+    "order_id": "order_id",
+    "order_item_id": "order_item_id",
+    "sales": "sales",
+    "benefit_per_order": "benefit_per_order",
+    "order_item_profit_ratio": "order_item_profit_ratio",
+    "order_item_quantity": "order_item_quantity",
+    "days_shipping_real": "days_shipping_real",
+    "Shipping time (promised)": "days_shipping_scheduled",
+    "delivery_status": "delivery_status",
+    "late_delivery_risk": "late_delivery_risk",
+    "shipping_mode": "shipping_mode",
+    "order_status": "order_status",
+    "category_name": "category_name",
+    "rgn_cd": "order_region",
+    "order_date": "order_date",
+    "shipping_date": "shipping_date"
+  }
+}

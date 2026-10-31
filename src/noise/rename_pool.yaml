@@ -1,0 +1,120 @@
+# Alternate header names for schema drift (TS-3.2).
+#
+# For each canonical field: 6 alternates, 2 in each style:
+#   1. abbreviated snake_case   2. vendor-style camelCase   3. semantic paraphrase
+#
+# order_id and order_item_id are never renamed (join key must survive), so they
+# have no entry. Every alternate must be unique and must not collide with any
+# canonical field name, even ignoring case and punctuation (tests check this).
+
+sales:
+  - sls_amt
+  - sales_usd
+  - grossSales
+  - lineRevenue
+  - "Revenue (line)"
+  - "Gross sale value"
+
+benefit_per_order:
+  - net_ord_margin_usd
+  - ben_per_ord
+  - orderProfit
+  - netEarnings
+  - "Profit (per order)"
+  - margin_contribution
+
+order_item_profit_ratio:
+  - itm_prft_ratio
+  - prft_rto
+  - itemProfitRatio
+  - marginPct
+  - "Profit margin (item)"
+  - "Line margin ratio"
+
+order_item_quantity:
+  - itm_qty
+  - ord_qty
+  - itemQty
+  - unitsOrdered
+  - "Units (line)"
+  - "Quantity ordered"
+
+days_shipping_real:
+  - ship_days_act
+  - days_shp_real
+  - actualShipDays
+  - transitDaysActual
+  - "Actual days in transit"
+  - "Shipping time (actual)"
+
+days_shipping_scheduled:
+  - ship_days_sched
+  - days_shp_plan
+  - plannedShipDays
+  - transitDaysPlanned
+  - "Planned days in transit"
+  - "Shipping time (promised)"
+
+delivery_status:
+  - dlv_stat
+  - deliv_sts
+  - deliveryState
+  - shipmentOutcome
+  - "Delivery outcome"
+  - "Status of delivery"
+
+late_delivery_risk:
+  - late_risk_flg
+  - lt_dlv_rsk
+  - lateRiskFlag
+  - isLateRisk
+  - "At risk of late delivery"
+  - "Late flag"
+
+shipping_mode:
+  - ship_md
+  - shp_mode
+  - shipMethod
+  - serviceLevel
+  - "Shipping service"
+  - "Delivery class"
+
+order_status:
+  - ord_stat
+  - ord_sts
+  - orderState
+  - fulfilmentStatus
+  - "Fulfilment stage"
+  - "Status of order"
+
+category_name:
+  - cat_nm
+  - prod_cat
+  - categoryLabel
+  - productCategory
+  - "Item category"
+  - "Merchandise group"
+
+order_region:
+  - ord_rgn
+  - rgn_cd
+  - destRegion
+  - marketRegion
+  - "Region of order"
+  - "Geographic region"
+
+order_date:
+  - ord_dt
+  - ord_ts
+  - orderTimestamp
+  - placedAt
+  - "Date ordered"
+  - "Order placed"
+
+shipping_date:
+  - shp_dt
+  - ship_ts
+  - shipTimestamp
+  - dispatchedAt
+  - "Date shipped"
+  - "Dispatch date"

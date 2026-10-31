@@ -1,0 +1,29 @@
+{
+  "level": 0.3,
+  "seed": 4,
+  "renamed": {
+    "actualShipDays": "days_shipping_real",
+    "transitDaysPlanned": "days_shipping_scheduled",
+    "Status of delivery": "delivery_status",
+    "prft_rto": "order_item_profit_ratio",
+    "sls_amt": "sales"
+  },
+  "header_map": {
+    "order_id": "order_id",
+    "order_item_id": "order_item_id",
+    "sls_amt": "sales",
+    "benefit_per_order": "benefit_per_order",
+    "prft_rto": "order_item_profit_ratio",
+    "order_item_quantity": "order_item_quantity",
+    "actualShipDays": "days_shipping_real",
+    "transitDaysPlanned": "days_shipping_scheduled",
+    "Status of delivery": "delivery_status",
+    "late_delivery_risk": "late_delivery_risk",
+    "shipping_mode": "shipping_mode",
+    "order_status": "order_status",
+    "category_name": "category_name",
+    "order_region": "order_region",
+    "order_date": "order_date",
+    "shipping_date": "shipping_date"
+  }
+}

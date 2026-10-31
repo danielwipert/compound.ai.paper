@@ -126,7 +126,7 @@ Noise is applied by `src/noise/inject.py` to the clean golden set, producing one
 
 ### TS-3.2 Schema drift `LOCKED D3`
 
-**Levels:** 5%, 15%, 30% of the 16 canonical headers renamed → 1, 2–3, 5 headers respectively (rounded: 1 / 2 / 5). `BUILD`: confirm rounding rule; recommend `round(0.05*16)=1`, `round(0.15*16)=2`, `round(0.30*16)=5`.
+**Levels:** 5%, 15%, 30% of the 16 canonical headers renamed → 1, 2–3, 5 headers respectively (rounded: 1 / 2 / 5). Rounding locked by D15: `round(0.05*16)=1`, `round(0.15*16)=2`, `round(0.30*16)=5`.
 
 **Rename pool** (`src/noise/rename_pool.yaml`): for each canonical field, ≥5 plausible alternates in three styles — abbreviated snake_case, vendor-style camelCase, and semantic paraphrase. Example for `benefit_per_order`:
 
