@@ -6,7 +6,7 @@ Does a compound system of small open-weight models, bounded by a deterministic P
 - Engineering detail: [`docs/tech-spec.md`](docs/tech-spec.md)
 - Decision log: [`docs/decisions.md`](docs/decisions.md)
 
-**Status:** Phase 1 (Build): skeleton, data download, `finance.py` and golden set done.
+**Status:** Phase 1 (Build): skeleton, data download, `finance.py`, golden set and ground truth done.
 
 ## Setup
 
@@ -33,6 +33,14 @@ python -m src.golden
 ```
 
 Picks the 500 test rows (TS-2.3, D14) with a fixed seed and writes `data/golden/golden_500.csv` and `data/golden/golden_500.strata.json`. These are committed; re-running gives identical files.
+
+Then freeze the financial ground truth (TS-2.4):
+
+```bash
+python -m src.ground_truth
+```
+
+This writes `data/golden/ground_truth.parquet` (also committed).
 
 ## Licence
 

@@ -108,6 +108,8 @@ delay_days               int      = days_shipping_real - days_shipping_scheduled
 risk_class               enum     {NONE, LATE, SEVERE_LATE, LOSS_MAKING, FRAUD_HOLD}
 ```
 
+*Storage (build note):* `ground_truth.parquet` holds the per-row fields (`order_item_id`, `cost_basis`, `profit_ratio_recomputed`, `profit_ratio_delta`, `delay_days`, `risk_class`). `header_map` and `delay_facts` vary per `(level, seed)` and are written by the noise injector to `data/noised/{level}/{seed}/` (TS-3.2, TS-3.3).
+
 `risk_class` rule (deterministic, in this order): `FRAUD_HOLD` if `order_status == 'SUSPECTED_FRAUD'`; `LOSS_MAKING` if `benefit_per_order < 0`; `SEVERE_LATE` if `delay_days >= 3`; `LATE` if `delay_days > 0`; else `NONE`.
 
 > **Note on OQ-2.** The original spec's "financial variance" is `Sales − Benefit per order`. In DataCo, `Benefit per order` is profit, so that quantity is cost basis, not margin variance. This spec computes it under the correct name (`cost_basis`) and adds `profit_ratio_delta` as the reconciliation check. Which one headlines "financial accuracy" is OQ-2.
