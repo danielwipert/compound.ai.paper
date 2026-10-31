@@ -1,7 +1,7 @@
 # Compound AI Architecture Benchmark — Product Spec
 
 **Version:** 1.0 · **Date:** 2026-10-29 · **Owner:** Daniel Wipert, Chorus AI Systems
-**Status:** Locked through decisions D1–D9 (see `decisions.md`). Open questions OQ-1 to OQ-5 outstanding.
+**Status:** Locked through decisions D1–D9 (see `decisions.md`). Open questions OQ-1, OQ-2 and OQ-5 outstanding (OQ-3, OQ-4 resolved by D18, D19).
 
 This is the short, human-readable spec. The full engineering detail is in `tech-spec.md`.
 
@@ -38,20 +38,20 @@ One frontier model, one prompt, does everything in a single pass — including t
 ### 3.2 Arm B — Tooled monolith *(the control)*
 Same frontier model, but given a JSON schema for its output and a code-execution tool for the math. This is the fair comparison. If the compound system can't tie this on accuracy, the cost argument doesn't matter.
 
-Frontier models: Claude Sonnet 5.5 and OpenAI's current mid-tier equivalent. (D7)
+Frontier models: Claude Sonnet 5.5 and OpenAI's mid-tier `gpt-6.1-terra`. (D7, D19)
 
 ### 3.3 Arm C — Compound system *(the thing we're testing)*
 Four small hosted models, each with one narrow job, connected by plain Python:
 
 | Node | Job | Model family |
 |------|-----|--------------|
-| A — Ingestion | Map noisy column headers to a strict typed schema | Qwen (3–4B) |
-| B — Extraction | Turn carrier free text into structured facts | SmolLM3 (3B) |
+| A — Ingestion | Map noisy column headers to a strict typed schema | Qwen 2.5 (7B) |
+| B — Extraction | Turn carrier free text into structured facts | Gemma 3 (4B) |
 | Python bus | Join, compute financials, build an immutable FactList | No model — pure Python |
-| C — Synthesis | Draft the exception report, citing only the FactList | Llama (8B) |
-| D — Verifier | Independent critic; halts the output if C says anything not in the FactList | Mistral (7B) |
+| C — Synthesis | Draft the exception report, citing only the FactList | Llama 3.1 (8B) |
+| D — Verifier | Independent critic; halts the output if C says anything not in the FactList | Ministral (8B) |
 
-All nodes run in the cloud through a model gateway. No local inference. (D4)
+All nodes run in the cloud through OpenRouter. No local inference. (D4, D18) SmolLM3, the original Node B choice, isn't offered by any gateway, so Google's Gemma takes its place. (D19)
 
 Four different model families are used on purpose: models from the same family share blind spots.
 
@@ -75,7 +75,7 @@ The two metrics at the top are the primary ones. (D2) They're where small models
 
 **Full matrix** — 500 rows × 3 noise levels (5%, 15%, 30% of headers renamed) × 5 repeat runs. Purpose: the paper. Produces a degradation curve — accuracy vs. noise — for each arm. Cash cost ≈ $140–160 using batch pricing (including a small groundedness-judge line); Claude-side usage covered by Max plan API credits across two monthly cycles. (D3)
 
-Compound-arm API spend is near zero (free tiers), which is why the second cost column exists. (D5)
+Compound-arm API spend is a few dollars for the whole study: the small models aren't free, but they're very cheap. We still report both actual spend and list-price cost for every arm. (D5, D20)
 
 ## 6. Keeping ourselves honest
 
@@ -119,7 +119,7 @@ After that, the hypotheses don't change. If the result goes the other way, the p
 
 | Risk | What we do about it |
 |------|---------------------|
-| Free-tier throttling stalls the full run | Fallback model per node; retry with backoff; run in chunks |
+| Provider rate limits stall the full run | Fallback model per node; retry with backoff; run in chunks |
 | Compound system ties but doesn't beat the tooled monolith on accuracy | That's a fine result — the claim is "ties on accuracy, wins on cost." Pre-registered as such. |
 | Compound system *loses* on accuracy | Report it. Still a useful finding about where small models break. |
 | Model names change before build | Lock exact IDs in `tech-spec.md` at build time; record them in the decision log |

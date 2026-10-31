@@ -262,14 +262,14 @@ Nodes A and B run in parallel. The bus runs only after both gates pass. Node D m
   ```
 - **Gate 1 rules:** all 16 canonical fields must be present exactly once in `mapping.values()`; `order_id` and `order_item_id` must map to themselves; otherwise `HALT, MAP_UNRESOLVED`.
 - Node A is called **once per (level, seed) variant**, not per row — the header row is the same for all 500 rows. Its cost is amortised accordingly (TS-7.6).
-- Model: Qwen 3–4B class. `BUILD`: exact gateway model ID.
+- Model: `qwen/qwen-2.5-7b-instruct` via OpenRouter (D19; spec originally Qwen 3–4B, not offered).
 
 ### TS-5.3 Node B — Extraction (carrier notes)
 
 - **Input:** `carrier_notes` string for one row; the `DelayFact` schema with enum definitions.
 - **Output:** `list[DelayFact]` (may be empty).
 - **Gate 2 rules:** Pydantic validation; unknown enum value → `HALT, EXTRACT_FAIL`. Empty list is valid.
-- Model: SmolLM3 3B class. `BUILD`: exact gateway model ID.
+- Model: `google/gemma-3-4b-it` via OpenRouter (D19; replaces SmolLM3 3B, which no gateway offers).
 
 ### TS-5.4 Python bus
 
@@ -297,7 +297,7 @@ Nodes A and B run in parallel. The bus runs only after both gates pass. Node D m
 - **Input:** `FactList` only. No raw row, no carrier note text.
 - **Output:** `report` (≤120 words) and `citations: list[str]` of `Fact.key` values used.
 - **Prompt rule:** every sentence must reference ≥1 fact key in brackets, e.g. `[F3]`.
-- Model: Llama 8B class (`OPEN OQ-4`).
+- Model: `meta-llama/llama-3.1-8b-instruct` via OpenRouter (D19, closes OQ-4).
 
 ### TS-5.6 Node D — Verifier
 
@@ -311,7 +311,7 @@ Nodes A and B run in parallel. The bus runs only after both gates pass. Node D m
   ```
 - **Rule:** `accept=False` if any sentence in `report` contains a numeric value, cause, or classification not present in `FactList`, or cites a key that does not exist.
 - On reject: Node C is re-run with the `Verdict` appended (max 2 retries). Third reject → `HALT, VERIFY_REJECT`.
-- Model: Mistral 7B class — must be a different family from Node C (observer-diversity rule).
+- Model: `mistralai/ministral-8b-2512` via OpenRouter (D19; Mistral 7B not offered) — must be a different family from Node C (observer-diversity rule).
 - **Independent check:** in addition to Node D, `src/compound/lint.py` does a deterministic regex/number check that every number in `report` appears in `FactList`. Discrepancies between lint and Node D are logged (TS-7.5 secondary metric: verifier recall vs lint).
 
 ### TS-5.7 Family diversity
@@ -319,7 +319,7 @@ Nodes A and B run in parallel. The bus runs only after both gates pass. Node D m
 | Node | Family | Must differ from |
 |------|--------|------------------|
 | A | Alibaba / Qwen | — |
-| B | HuggingFace / SmolLM | — |
+| B | Google / Gemma (D19) | — |
 | C | Meta / Llama | D |
 | D | Mistral | C |
 
@@ -334,17 +334,17 @@ Four distinct families. Same-family substitution in a fallback (TS-6.3) is allow
 | Role | Model | Provider path | Pricing mode | Status |
 |------|-------|---------------|--------------|--------|
 | Monolith 1 (Arms A, B) | Claude Sonnet 5.5 | Anthropic API direct (Max-plan credits) — batch API for full run | list / batch 50% | LOCKED D7 |
-| Monolith 2 (Arms A, B) | OpenAI mid-tier equivalent | OpenAI API direct — batch API for full run | list / batch 50% | ID: BUILD |
-| Node A | Qwen 3–4B | gateway | free tier | ID: BUILD |
-| Node B | SmolLM3 3B | gateway | free tier | ID: BUILD |
-| Node C | Llama 8B | gateway | free tier | OQ-4 |
-| Node D | Mistral 7B | gateway | free tier | ID: BUILD |
+| Monolith 2 (Arms A, B) | `gpt-6.1-terra` | OpenAI API direct — batch API for full run | list / batch 50% | D19 |
+| Node A | `qwen/qwen-2.5-7b-instruct` | OpenRouter | paid (D20) | D19 |
+| Node B | `google/gemma-3-4b-it` | OpenRouter | paid (D20) | D19 |
+| Node C | `meta-llama/llama-3.1-8b-instruct` | OpenRouter | paid (D20) | D19 |
+| Node D | `mistralai/ministral-8b-2512` | OpenRouter | paid (D20) | D19 |
 
 `BUILD`: at build time, record the exact model ID string, provider, context length, and list price (input/output per 1M tokens) for every row in `results/model_manifest.json`. Lock via decision entry D10.
 
-### TS-6.2 Gateway `OPEN OQ-3`
+### TS-6.2 Gateway `LOCKED D18`
 
-Candidates: Hopscotch AI (`https://hopscotchlabs.ai/v1`, OpenAI-compatible, zero markup, BYOK) or OpenRouter. Requirements either way:
+OpenRouter (`https://openrouter.ai/api/v1`, OpenAI-compatible) for all compound nodes. Hopscotch AI was the other candidate; see `docs/gateway-survey.md`. Requirements:
 
 - OpenAI-compatible chat completions endpoint
 - Per-request usage object (prompt / completion tokens) returned
@@ -361,7 +361,7 @@ Single client class `GatewayClient` with provider adapters; all arms call throug
 | Fallback model | Declared per node in `config/models.yaml`; must respect TS-5.7 |
 | Fallback exhausted | `HALT, PROVIDER_ERROR` — counted in coverage, excluded from accuracy denominators, reported separately |
 | Run chunking | Full matrix executed in chunks of 50 rows; each chunk checkpointed to `results/{run_id}/chunks/`; resumable |
-| Daily free-tier caps | Scheduler spreads compound-arm calls across days if cap reached; recorded in run log |
+| Provider rate limits | Scheduler spreads compound-arm calls over time if a limit is hit; recorded in run log (no free tier in use, D20) |
 
 ### TS-6.4 Secrets
 
@@ -410,7 +410,7 @@ All metrics computed by `src/metrics/compute.py` from `ExceptionRecord` outputs 
 Per (arm, level, seed):
 
 ```
-cost_actual_usd        = Σ provider-reported charges (0 for free-tier)
+cost_actual_usd        = Σ provider-reported charges (paid for every arm, D20)
 cost_list_usd          = Σ (prompt_tokens × list_in + completion_tokens × list_out) / 1e6
 cost_per_1k_rows_*     = cost_* / rows × 1000
 ```
@@ -593,9 +593,9 @@ Plus a machine copy: `.../{order_item_id}.json` with the same content. Prompts a
 |------|-------|------|-------|
 | OpenAI monolith (Arms A+B) | ~$20 | ~$140 | batch rate for full |
 | Claude monolith (Arms A+B) | ~$20 → credits | ~$140 → credits | Max 5x plan: $100/mo API credits; full run spans 2 cycles |
-| Compound nodes | ~$0 | ~$0 | free tiers; list-equivalent reported ≈ $1–3 total |
+| Compound nodes | ~$1 | ~$2–10 | paid via OpenRouter (D20); estimate in `docs/gateway-survey.md` |
 | Groundedness judge | <$5 | <$20 | cross-family, cheap model |
-| **Cash out of pocket** | **≈ $25** | **≈ $160** | |
+| **Cash out of pocket** | **≈ $26** | **≈ $170** | |
 
 Assumptions: ~1,500 prompt + ~500 completion tokens per row for Arm A; ~2× for Arm B. `BUILD`: replace with measured dry-run token counts.
 
@@ -607,8 +607,8 @@ Assumptions: ~1,500 prompt + ~500 completion tokens per row for Arm A; ~2× for 
 |----|-------------|-----------|
 | OQ-1 extra noise axes | decisions.md | No — can ship v1 without |
 | OQ-2 headline financial field | decisions.md | Yes — before HYPOTHESES.md |
-| OQ-3 gateway | decisions.md | Yes — before dry run |
-| OQ-4 Node C model | decisions.md | Yes — before dry run |
+| OQ-3 gateway | **Resolved: D18** | — |
+| OQ-4 Node C model | **Resolved: D19** | — |
 | OQ-5 MARL-EVAL naming | paper | No |
 | BUILD model IDs / prices | D10 | Yes — before pre-registration tag |
 | BUILD prereg tag hash | D11 | Yes — before pilot |
