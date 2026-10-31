@@ -172,7 +172,7 @@ class DelayFact(BaseModel):
 
 Rows with `delay_days <= 0` get `carrier_notes = ""` in 80% of cases and a benign note (`"Delivered. No exceptions."` → facts: none) in 20%, so that "empty note" is not a perfect predictor of "no facts."
 
-Templates: ≥25. Each note instantiation is seeded. Ground truth per row written to `data/noised/{level}/{seed}/delay_facts.jsonl`.
+Templates: ≥25. Each note instantiation is seeded. Ground truth per row written to `data/noised/{level}/{seed}/delay_facts.jsonl`. Build locks (D16): notes depend on the seed only (identical across drift levels); note numbers agree with the row's `delay_days`; 30 delay + 5 benign templates.
 
 ### TS-3.4 Additional noise axes `OPEN OQ-1`
 

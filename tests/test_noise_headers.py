@@ -7,6 +7,7 @@ import pytest
 
 from src.noise.inject import (
     GOLDEN_CSV,
+    NOTE_TEMPLATES_YAML,
     PROTECTED_FIELDS,
     RENAMABLE_FIELDS,
     RENAME_POOL_YAML,
@@ -70,14 +71,15 @@ def test_same_seed_same_renames_different_seed_differs():
 
 def test_make_variant_on_golden_set():
     golden = pd.read_csv(GOLDEN_CSV)
-    noised, header_map = make_variant(golden, 0.15, 3, POOL)
+    noised, header_map, _ = make_variant(golden, 0.15, 3, POOL, load_yaml(NOTE_TEMPLATES_YAML))
+    data_columns = list(noised.columns[:16])
 
-    # same data, only headers changed, order kept
-    assert noised.values.tolist() == golden.values.tolist()
-    assert len(noised.columns) == 16
+    # same data, only headers changed, order kept; carrier_notes appended last
+    assert noised[data_columns].values.tolist() == golden.values.tolist()
+    assert list(noised.columns[16:]) == ["carrier_notes"]
 
-    # header_map covers every noisy header and points back to the canonical name
-    assert list(header_map["header_map"]) == list(noised.columns)
+    # header_map covers every noisy data header and points back to the canonical name
+    assert list(header_map["header_map"]) == data_columns
     assert sorted(header_map["header_map"].values()) == sorted(CANONICAL_FIELDS)
 
     # 'renamed' is the subset that actually changed

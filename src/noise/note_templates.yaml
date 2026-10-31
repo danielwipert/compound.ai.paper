@@ -1,0 +1,171 @@
+# Carrier note templates (TS-3.3).
+#
+# delay_templates: used for rows with delay_days > 0. Each template lists the
+#   structured facts (DelayFact) it states. Placeholders are filled per row:
+#     {days}        the row's real delay_days
+#     {days_word}   the same number as a word ("two")
+#     {hours}       hours that round up to the row's delay_days, e.g. 25..48 for 2 days
+#     {days1}+{days2}  two parts adding up to delay_days (two-fact templates only,
+#                   used when delay_days >= 2)
+#     {port} {terminal} {hub} {city} {route}   picked from value_pools below
+#   Numbers in facts become ints; everything else stays text.
+#
+# benign_templates: used for 20% of rows with delay_days <= 0. They state no facts.
+
+value_pools:
+  port: [Rotterdam, Long Beach, Singapore, Santos, Felixstowe, Busan, Durban]
+  terminal: [T4, APM 2, Berth 12, Pier 400, CT3]
+  hub: [Memphis, Louisville, Leipzig, Dubai, Chicago, Atlanta]
+  city: [Denver, Lyon, Monterrey, Pune, Brisbane, Accra]
+  route: [I-80 eastbound, Dallas-Atlanta, A1 northbound, Lagos-Abuja, Shanghai-Chengdu]
+
+delay_templates:
+  # --- PORT_CONGESTION ---
+  - id: T01
+    template: "Port congestion at terminal {terminal}; customs release delayed {hours} hrs"
+    facts:
+      - {cause: PORT_CONGESTION, secondary_cause: CUSTOMS, delay_hours: "{hours}"}
+  - id: T02
+    template: "Vessel waiting for berth at {port}. Arrival slipped {days} day(s)."
+    facts:
+      - {cause: PORT_CONGESTION, delay_days: "{days}", location: "{port}"}
+  - id: T03
+    template: "Container stuck in yard backlog, {port}. +{days}d"
+    facts:
+      - {cause: PORT_CONGESTION, delay_days: "{days}", location: "{port}"}
+
+  # --- CUSTOMS ---
+  - id: T04
+    template: "Held by customs at {port} pending paperwork - released after {hours}h."
+    facts:
+      - {cause: CUSTOMS, delay_hours: "{hours}", location: "{port}"}
+  - id: T05
+    template: "Customs inspection selected; clearance took {days_word} extra day(s)."
+    facts:
+      - {cause: CUSTOMS, delay_days: "{days}"}
+  - id: T06
+    template: "Missing commercial invoice, broker hold {days}d"
+    facts:
+      - {cause: CUSTOMS, delay_days: "{days}"}
+
+  # --- WEATHER ---
+  - id: T07
+    template: "Severe weather closed the {route} corridor. Delivery delayed by {days} day(s)."
+    facts:
+      - {cause: WEATHER, delay_days: "{days}", location: "{route}"}
+  - id: T08
+    template: "Snowstorm at {hub} hub, all outbound trucks held {hours} hrs"
+    facts:
+      - {cause: WEATHER, delay_hours: "{hours}", location: "{hub}"}
+  - id: T09
+    template: "wx delay - flooding near {city}, ETA +{days}"
+    facts:
+      - {cause: WEATHER, delay_days: "{days}", location: "{city}"}
+
+  # --- LABOUR ---
+  - id: T10
+    template: "Driver shortage on {route} lane. ETA pushed {days}d."
+    facts:
+      - {cause: LABOUR, delay_days: "{days}"}
+  - id: T11
+    template: "Warehouse strike at {hub}; shipment delayed {days_word} day(s)."
+    facts:
+      - {cause: LABOUR, delay_days: "{days}", location: "{hub}"}
+  - id: T12
+    template: "No driver available for pickup, rescheduled +{hours}h"
+    facts:
+      - {cause: LABOUR, delay_hours: "{hours}"}
+
+  # --- MECHANICAL ---
+  - id: T13
+    template: "Truck breakdown outside {city}. Load transferred, {hours} hrs lost."
+    facts:
+      - {cause: MECHANICAL, delay_hours: "{hours}", location: "{city}"}
+  - id: T14
+    template: "Reefer unit failure; replacement trailer dispatched. Delay {days}d."
+    facts:
+      - {cause: MECHANICAL, delay_days: "{days}"}
+  - id: T15
+    template: "Engine fault on linehaul tractor - delivery {days} day(s) late"
+    facts:
+      - {cause: MECHANICAL, delay_days: "{days}"}
+
+  # --- ADDRESS_ISSUE ---
+  - id: T16
+    template: "Consignee address incomplete, awaiting customer confirmation. +{days} day(s)"
+    facts:
+      - {cause: ADDRESS_ISSUE, delay_days: "{days}"}
+  - id: T17
+    template: "Wrong postcode on label; rerouted via {hub}, delay {hours} hrs"
+    facts:
+      - {cause: ADDRESS_ISSUE, delay_hours: "{hours}", location: "{hub}"}
+  - id: T18
+    template: "Recipient not at address. Redelivery booked {days_word} day(s) later."
+    facts:
+      - {cause: ADDRESS_ISSUE, delay_days: "{days}"}
+
+  # --- CAPACITY ---
+  - id: T19
+    template: "Trailer at capacity; freight rolled to next departure (+{days}d)"
+    facts:
+      - {cause: CAPACITY, delay_days: "{days}"}
+  - id: T20
+    template: "Overbooked on {route}, shipment bumped {hours} hours"
+    facts:
+      - {cause: CAPACITY, delay_hours: "{hours}"}
+  - id: T21
+    template: "Peak season volume at {hub}, sortation backlog {days} day(s)"
+    facts:
+      - {cause: CAPACITY, delay_days: "{days}", location: "{hub}"}
+
+  # --- UNKNOWN ---
+  - id: T22
+    template: "Delayed in transit. Carrier gave no reason. +{days}d"
+    facts:
+      - {cause: UNKNOWN, delay_days: "{days}"}
+  - id: T23
+    template: "Late. Cause under investigation by carrier."
+    facts:
+      - {cause: UNKNOWN}
+  - id: T24
+    template: "Exception scan at {hub}; reason code not provided. {hours}h delay"
+    facts:
+      - {cause: UNKNOWN, delay_hours: "{hours}", location: "{hub}"}
+  - id: T25
+    template: "ETA moved {days} day(s); see carrier portal for details"
+    facts:
+      - {cause: UNKNOWN, delay_days: "{days}"}
+
+  # --- primary + secondary cause in one fact ---
+  - id: T26
+    template: "Storm surge shut {port}, causing berth congestion; total delay {days}d"
+    facts:
+      - {cause: WEATHER, secondary_cause: PORT_CONGESTION, delay_days: "{days}", location: "{port}"}
+  - id: T27
+    template: "Customs hold extended because broker staff on strike - {days_word} day(s)"
+    facts:
+      - {cause: CUSTOMS, secondary_cause: LABOUR, delay_days: "{days}"}
+
+  # --- two separate facts (only when delay_days >= 2) ---
+  - id: T28
+    template: "Weather hold at {hub} ({days1}d), then truck breakdown added {days2}d."
+    facts:
+      - {cause: WEATHER, delay_days: "{days1}", location: "{hub}"}
+      - {cause: MECHANICAL, delay_days: "{days2}"}
+  - id: T29
+    template: "Customs exam took {days1} day(s); afterwards no space on next truck, +{days2} day(s)."
+    facts:
+      - {cause: CUSTOMS, delay_days: "{days1}"}
+      - {cause: CAPACITY, delay_days: "{days2}"}
+  - id: T30
+    template: "Address correction needed (+{days1}d) and driver shortage on redelivery (+{days2}d)"
+    facts:
+      - {cause: ADDRESS_ISSUE, delay_days: "{days1}"}
+      - {cause: LABOUR, delay_days: "{days2}"}
+
+benign_templates:
+  - {id: B01, template: "Delivered. No exceptions."}
+  - {id: B02, template: "POD received, signed by consignee."}
+  - {id: B03, template: "Delivered on schedule."}
+  - {id: B04, template: "No issues reported by carrier."}
+  - {id: B05, template: "Left at front desk; customer notified."}

@@ -6,7 +6,7 @@ Does a compound system of small open-weight models, bounded by a deterministic P
 - Engineering detail: [`docs/tech-spec.md`](docs/tech-spec.md)
 - Decision log: [`docs/decisions.md`](docs/decisions.md)
 
-**Status:** Phase 1 (Build): skeleton, data download, `finance.py`, golden set, ground truth and header drift done.
+**Status:** Phase 1 (Build): skeleton, data download, `finance.py`, golden set, ground truth and noise injection done.
 
 ## Setup
 
@@ -48,7 +48,7 @@ This writes `data/golden/ground_truth.parquet` (also committed).
 python -m src.noise.inject
 ```
 
-Writes 15 variants (3 drift levels × 5 seeds, see `config/experiment.yaml`) to `data/noised/{level}/{seed}/`: `noised.csv` with some headers renamed, and `header_map.json` with the true mapping. Committed; re-running gives identical files.
+Writes 15 variants (3 drift levels × 5 seeds, see `config/experiment.yaml`) to `data/noised/{level}/{seed}/`: `noised.csv` (some headers renamed, plus a free-text `carrier_notes` column), `header_map.json` (true header mapping) and `delay_facts.jsonl` (true facts per note). Committed; re-running gives identical files.
 
 ## Licence
 

@@ -1,0 +1,500 @@
+{"order_item_id": 54050, "template_id": null, "delay_facts": []}
+{"order_item_id": 136713, "template_id": "T18", "delay_facts": [{"cause": "ADDRESS_ISSUE", "delay_days": 1}]}
+{"order_item_id": 155382, "template_id": "T17", "delay_facts": [{"cause": "ADDRESS_ISSUE", "delay_hours": 26, "location": "Leipzig"}]}
+{"order_item_id": 44014, "template_id": "B03", "delay_facts": []}
+{"order_item_id": 48415, "template_id": "T21", "delay_facts": [{"cause": "CAPACITY", "delay_days": 1, "location": "Memphis"}]}
+{"order_item_id": 2623, "template_id": null, "delay_facts": []}
+{"order_item_id": 152686, "template_id": "T01", "delay_facts": [{"cause": "PORT_CONGESTION", "secondary_cause": "CUSTOMS", "delay_hours": 80}]}
+{"order_item_id": 163968, "template_id": "T18", "delay_facts": [{"cause": "ADDRESS_ISSUE", "delay_days": 4}]}
+{"order_item_id": 114524, "template_id": null, "delay_facts": []}
+{"order_item_id": 35611, "template_id": null, "delay_facts": []}
+{"order_item_id": 156693, "template_id": "T26", "delay_facts": [{"cause": "WEATHER", "secondary_cause": "PORT_CONGESTION", "delay_days": 1, "location": "Busan"}]}
+{"order_item_id": 96143, "template_id": "T13", "delay_facts": [{"cause": "MECHANICAL", "delay_hours": 2, "location": "Lyon"}]}
+{"order_item_id": 9785, "template_id": null, "delay_facts": []}
+{"order_item_id": 23564, "template_id": "T19", "delay_facts": [{"cause": "CAPACITY", "delay_days": 1}]}
+{"order_item_id": 55346, "template_id": "T13", "delay_facts": [{"cause": "MECHANICAL", "delay_hours": 36, "location": "Pune"}]}
+{"order_item_id": 153951, "template_id": "T03", "delay_facts": [{"cause": "PORT_CONGESTION", "delay_days": 4, "location": "Rotterdam"}]}
+{"order_item_id": 120085, "template_id": null, "delay_facts": []}
+{"order_item_id": 8841, "template_id": null, "delay_facts": []}
+{"order_item_id": 3006, "template_id": "T25", "delay_facts": [{"cause": "UNKNOWN", "delay_days": 2}]}
+{"order_item_id": 36286, "template_id": null, "delay_facts": []}
+{"order_item_id": 175950, "template_id": "T26", "delay_facts": [{"cause": "WEATHER", "secondary_cause": "PORT_CONGESTION", "delay_days": 2, "location": "Rotterdam"}]}
+{"order_item_id": 64414, "template_id": "T22", "delay_facts": [{"cause": "UNKNOWN", "delay_days": 1}]}
+{"order_item_id": 171078, "template_id": "B02", "delay_facts": []}
+{"order_item_id": 138555, "template_id": null, "delay_facts": []}
+{"order_item_id": 34693, "template_id": "T11", "delay_facts": [{"cause": "LABOUR", "delay_days": 2, "location": "Leipzig"}]}
+{"order_item_id": 12611, "template_id": null, "delay_facts": []}
+{"order_item_id": 75482, "template_id": "T23", "delay_facts": [{"cause": "UNKNOWN"}]}
+{"order_item_id": 109290, "template_id": "T14", "delay_facts": [{"cause": "MECHANICAL", "delay_days": 1}]}
+{"order_item_id": 81225, "template_id": null, "delay_facts": []}
+{"order_item_id": 24843, "template_id": "T06", "delay_facts": [{"cause": "CUSTOMS", "delay_days": 3}]}
+{"order_item_id": 176233, "template_id": null, "delay_facts": []}
+{"order_item_id": 44367, "template_id": "B01", "delay_facts": []}
+{"order_item_id": 38629, "template_id": "B02", "delay_facts": []}
+{"order_item_id": 115111, "template_id": "T25", "delay_facts": [{"cause": "UNKNOWN", "delay_days": 1}]}
+{"order_item_id": 101547, "template_id": null, "delay_facts": []}
+{"order_item_id": 176435, "template_id": "T11", "delay_facts": [{"cause": "LABOUR", "delay_days": 4, "location": "Louisville"}]}
+{"order_item_id": 14205, "template_id": "T23", "delay_facts": [{"cause": "UNKNOWN"}]}
+{"order_item_id": 61895, "template_id": "B04", "delay_facts": []}
+{"order_item_id": 145976, "template_id": null, "delay_facts": []}
+{"order_item_id": 153462, "template_id": "T25", "delay_facts": [{"cause": "UNKNOWN", "delay_days": 1}]}
+{"order_item_id": 59121, "template_id": null, "delay_facts": []}
+{"order_item_id": 109589, "template_id": null, "delay_facts": []}
+{"order_item_id": 17721, "template_id": "T06", "delay_facts": [{"cause": "CUSTOMS", "delay_days": 3}]}
+{"order_item_id": 160249, "template_id": "T06", "delay_facts": [{"cause": "CUSTOMS", "delay_days": 1}]}
+{"order_item_id": 65218, "template_id": "T13", "delay_facts": [{"cause": "MECHANICAL", "delay_hours": 54, "location": "Accra"}]}
+{"order_item_id": 143026, "template_id": "T04", "delay_facts": [{"cause": "CUSTOMS", "delay_hours": 79, "location": "Felixstowe"}]}
+{"order_item_id": 25506, "template_id": "T11", "delay_facts": [{"cause": "LABOUR", "delay_days": 1, "location": "Leipzig"}]}
+{"order_item_id": 42360, "template_id": null, "delay_facts": []}
+{"order_item_id": 166256, "template_id": "T16", "delay_facts": [{"cause": "ADDRESS_ISSUE", "delay_days": 1}]}
+{"order_item_id": 19452, "template_id": "T13", "delay_facts": [{"cause": "MECHANICAL", "delay_hours": 86, "location": "Monterrey"}]}
+{"order_item_id": 143128, "template_id": "T10", "delay_facts": [{"cause": "LABOUR", "delay_days": 1}]}
+{"order_item_id": 22962, "template_id": null, "delay_facts": []}
+{"order_item_id": 145549, "template_id": "T04", "delay_facts": [{"cause": "CUSTOMS", "delay_hours": 31, "location": "Singapore"}]}
+{"order_item_id": 5199, "template_id": "T13", "delay_facts": [{"cause": "MECHANICAL", "delay_hours": 24, "location": "Brisbane"}]}
+{"order_item_id": 112716, "template_id": "T23", "delay_facts": [{"cause": "UNKNOWN"}]}
+{"order_item_id": 3311, "template_id": "T24", "delay_facts": [{"cause": "UNKNOWN", "delay_hours": 16, "location": "Atlanta"}]}
+{"order_item_id": 139465, "template_id": null, "delay_facts": []}
+{"order_item_id": 177012, "template_id": "T25", "delay_facts": [{"cause": "UNKNOWN", "delay_days": 1}]}
+{"order_item_id": 40003, "template_id": null, "delay_facts": []}
+{"order_item_id": 77545, "template_id": "T03", "delay_facts": [{"cause": "PORT_CONGESTION", "delay_days": 3, "location": "Singapore"}]}
+{"order_item_id": 52338, "template_id": "T26", "delay_facts": [{"cause": "WEATHER", "secondary_cause": "PORT_CONGESTION", "delay_days": 1, "location": "Singapore"}]}
+{"order_item_id": 154968, "template_id": "T27", "delay_facts": [{"cause": "CUSTOMS", "secondary_cause": "LABOUR", "delay_days": 2}]}
+{"order_item_id": 15789, "template_id": "T15", "delay_facts": [{"cause": "MECHANICAL", "delay_days": 4}]}
+{"order_item_id": 25100, "template_id": "T18", "delay_facts": [{"cause": "ADDRESS_ISSUE", "delay_days": 2}]}
+{"order_item_id": 82165, "template_id": "T13", "delay_facts": [{"cause": "MECHANICAL", "delay_hours": 18, "location": "Denver"}]}
+{"order_item_id": 1635, "template_id": null, "delay_facts": []}
+{"order_item_id": 138456, "template_id": "T03", "delay_facts": [{"cause": "PORT_CONGESTION", "delay_days": 3, "location": "Santos"}]}
+{"order_item_id": 69330, "template_id": null, "delay_facts": []}
+{"order_item_id": 75021, "template_id": "T03", "delay_facts": [{"cause": "PORT_CONGESTION", "delay_days": 3, "location": "Durban"}]}
+{"order_item_id": 8204, "template_id": null, "delay_facts": []}
+{"order_item_id": 168442, "template_id": "T07", "delay_facts": [{"cause": "WEATHER", "delay_days": 4, "location": "Shanghai-Chengdu"}]}
+{"order_item_id": 72244, "template_id": "T18", "delay_facts": [{"cause": "ADDRESS_ISSUE", "delay_days": 1}]}
+{"order_item_id": 32696, "template_id": "T16", "delay_facts": [{"cause": "ADDRESS_ISSUE", "delay_days": 2}]}
+{"order_item_id": 98968, "template_id": "T23", "delay_facts": [{"cause": "UNKNOWN"}]}
+{"order_item_id": 118261, "template_id": "T06", "delay_facts": [{"cause": "CUSTOMS", "delay_days": 1}]}
+{"order_item_id": 36364, "template_id": "T23", "delay_facts": [{"cause": "UNKNOWN"}]}
+{"order_item_id": 79785, "template_id": "T04", "delay_facts": [{"cause": "CUSTOMS", "delay_hours": 62, "location": "Long Beach"}]}
+{"order_item_id": 128553, "template_id": "B01", "delay_facts": []}
+{"order_item_id": 136051, "template_id": "T26", "delay_facts": [{"cause": "WEATHER", "secondary_cause": "PORT_CONGESTION", "delay_days": 1, "location": "Busan"}]}
+{"order_item_id": 44571, "template_id": "T03", "delay_facts": [{"cause": "PORT_CONGESTION", "delay_days": 2, "location": "Rotterdam"}]}
+{"order_item_id": 137729, "template_id": "T29", "delay_facts": [{"cause": "CUSTOMS", "delay_days": 3}, {"cause": "CAPACITY", "delay_days": 1}]}
+{"order_item_id": 73832, "template_id": null, "delay_facts": []}
+{"order_item_id": 17189, "template_id": "T15", "delay_facts": [{"cause": "MECHANICAL", "delay_days": 3}]}
+{"order_item_id": 177522, "template_id": "T03", "delay_facts": [{"cause": "PORT_CONGESTION", "delay_days": 1, "location": "Rotterdam"}]}
+{"order_item_id": 180442, "template_id": "T18", "delay_facts": [{"cause": "ADDRESS_ISSUE", "delay_days": 1}]}
+{"order_item_id": 19146, "template_id": "T14", "delay_facts": [{"cause": "MECHANICAL", "delay_days": 1}]}
+{"order_item_id": 82008, "template_id": "T11", "delay_facts": [{"cause": "LABOUR", "delay_days": 1, "location": "Louisville"}]}
+{"order_item_id": 65667, "template_id": null, "delay_facts": []}
+{"order_item_id": 120443, "template_id": null, "delay_facts": []}
+{"order_item_id": 70265, "template_id": null, "delay_facts": []}
+{"order_item_id": 82305, "template_id": null, "delay_facts": []}
+{"order_item_id": 55164, "template_id": "B02", "delay_facts": []}
+{"order_item_id": 131952, "template_id": "T16", "delay_facts": [{"cause": "ADDRESS_ISSUE", "delay_days": 4}]}
+{"order_item_id": 58385, "template_id": "T30", "delay_facts": [{"cause": "ADDRESS_ISSUE", "delay_days": 1}, {"cause": "LABOUR", "delay_days": 1}]}
+{"order_item_id": 164637, "template_id": "T05", "delay_facts": [{"cause": "CUSTOMS", "delay_days": 2}]}
+{"order_item_id": 156220, "template_id": null, "delay_facts": []}
+{"order_item_id": 147763, "template_id": "T16", "delay_facts": [{"cause": "ADDRESS_ISSUE", "delay_days": 2}]}
+{"order_item_id": 173936, "template_id": null, "delay_facts": []}
+{"order_item_id": 57900, "template_id": "T19", "delay_facts": [{"cause": "CAPACITY", "delay_days": 2}]}
+{"order_item_id": 146687, "template_id": "T16", "delay_facts": [{"cause": "ADDRESS_ISSUE", "delay_days": 3}]}
+{"order_item_id": 27023, "template_id": "T03", "delay_facts": [{"cause": "PORT_CONGESTION", "delay_days": 1, "location": "Santos"}]}
+{"order_item_id": 1426, "template_id": "T20", "delay_facts": [{"cause": "CAPACITY", "delay_hours": 37}]}
+{"order_item_id": 20801, "template_id": "T14", "delay_facts": [{"cause": "MECHANICAL", "delay_days": 2}]}
+{"order_item_id": 61728, "template_id": "T06", "delay_facts": [{"cause": "CUSTOMS", "delay_days": 2}]}
+{"order_item_id": 94709, "template_id": null, "delay_facts": []}
+{"order_item_id": 128906, "template_id": "T05", "delay_facts": [{"cause": "CUSTOMS", "delay_days": 1}]}
+{"order_item_id": 73475, "template_id": "T26", "delay_facts": [{"cause": "WEATHER", "secondary_cause": "PORT_CONGESTION", "delay_days": 1, "location": "Long Beach"}]}
+{"order_item_id": 99481, "template_id": null, "delay_facts": []}
+{"order_item_id": 154202, "template_id": "T12", "delay_facts": [{"cause": "LABOUR", "delay_hours": 12}]}
+{"order_item_id": 130779, "template_id": "T18", "delay_facts": [{"cause": "ADDRESS_ISSUE", "delay_days": 3}]}
+{"order_item_id": 71969, "template_id": "T15", "delay_facts": [{"cause": "MECHANICAL", "delay_days": 1}]}
+{"order_item_id": 130039, "template_id": "T10", "delay_facts": [{"cause": "LABOUR", "delay_days": 2}]}
+{"order_item_id": 48334, "template_id": "B05", "delay_facts": []}
+{"order_item_id": 172745, "template_id": "T12", "delay_facts": [{"cause": "LABOUR", "delay_hours": 1}]}
+{"order_item_id": 96804, "template_id": "T19", "delay_facts": [{"cause": "CAPACITY", "delay_days": 1}]}
+{"order_item_id": 39288, "template_id": "T09", "delay_facts": [{"cause": "WEATHER", "delay_days": 1, "location": "Denver"}]}
+{"order_item_id": 133993, "template_id": "B03", "delay_facts": []}
+{"order_item_id": 156642, "template_id": null, "delay_facts": []}
+{"order_item_id": 124126, "template_id": "T02", "delay_facts": [{"cause": "PORT_CONGESTION", "delay_days": 4, "location": "Rotterdam"}]}
+{"order_item_id": 49571, "template_id": "T15", "delay_facts": [{"cause": "MECHANICAL", "delay_days": 1}]}
+{"order_item_id": 128295, "template_id": null, "delay_facts": []}
+{"order_item_id": 64996, "template_id": null, "delay_facts": []}
+{"order_item_id": 2603, "template_id": "T26", "delay_facts": [{"cause": "WEATHER", "secondary_cause": "PORT_CONGESTION", "delay_days": 3, "location": "Santos"}]}
+{"order_item_id": 130693, "template_id": null, "delay_facts": []}
+{"order_item_id": 29730, "template_id": "T05", "delay_facts": [{"cause": "CUSTOMS", "delay_days": 4}]}
+{"order_item_id": 66585, "template_id": "T18", "delay_facts": [{"cause": "ADDRESS_ISSUE", "delay_days": 4}]}
+{"order_item_id": 24477, "template_id": null, "delay_facts": []}
+{"order_item_id": 153940, "template_id": null, "delay_facts": []}
+{"order_item_id": 22342, "template_id": "T02", "delay_facts": [{"cause": "PORT_CONGESTION", "delay_days": 4, "location": "Rotterdam"}]}
+{"order_item_id": 127491, "template_id": "T26", "delay_facts": [{"cause": "WEATHER", "secondary_cause": "PORT_CONGESTION", "delay_days": 1, "location": "Rotterdam"}]}
+{"order_item_id": 139810, "template_id": null, "delay_facts": []}
+{"order_item_id": 88890, "template_id": "T01", "delay_facts": [{"cause": "PORT_CONGESTION", "secondary_cause": "CUSTOMS", "delay_hours": 3}]}
+{"order_item_id": 151825, "template_id": "T16", "delay_facts": [{"cause": "ADDRESS_ISSUE", "delay_days": 1}]}
+{"order_item_id": 61702, "template_id": "T21", "delay_facts": [{"cause": "CAPACITY", "delay_days": 4, "location": "Dubai"}]}
+{"order_item_id": 42192, "template_id": "T07", "delay_facts": [{"cause": "WEATHER", "delay_days": 3, "location": "A1 northbound"}]}
+{"order_item_id": 87345, "template_id": "T19", "delay_facts": [{"cause": "CAPACITY", "delay_days": 1}]}
+{"order_item_id": 109162, "template_id": "T26", "delay_facts": [{"cause": "WEATHER", "secondary_cause": "PORT_CONGESTION", "delay_days": 3, "location": "Durban"}]}
+{"order_item_id": 90620, "template_id": "T19", "delay_facts": [{"cause": "CAPACITY", "delay_days": 2}]}
+{"order_item_id": 39864, "template_id": "T13", "delay_facts": [{"cause": "MECHANICAL", "delay_hours": 60, "location": "Denver"}]}
+{"order_item_id": 106747, "template_id": "T05", "delay_facts": [{"cause": "CUSTOMS", "delay_days": 1}]}
+{"order_item_id": 2945, "template_id": null, "delay_facts": []}
+{"order_item_id": 153957, "template_id": "T25", "delay_facts": [{"cause": "UNKNOWN", "delay_days": 1}]}
+{"order_item_id": 17911, "template_id": "T17", "delay_facts": [{"cause": "ADDRESS_ISSUE", "delay_hours": 61, "location": "Dubai"}]}
+{"order_item_id": 28552, "template_id": "T23", "delay_facts": [{"cause": "UNKNOWN"}]}
+{"order_item_id": 12060, "template_id": "T11", "delay_facts": [{"cause": "LABOUR", "delay_days": 4, "location": "Chicago"}]}
+{"order_item_id": 17833, "template_id": "T17", "delay_facts": [{"cause": "ADDRESS_ISSUE", "delay_hours": 18, "location": "Dubai"}]}
+{"order_item_id": 77243, "template_id": null, "delay_facts": []}
+{"order_item_id": 69593, "template_id": "T23", "delay_facts": [{"cause": "UNKNOWN"}]}
+{"order_item_id": 60268, "template_id": "T10", "delay_facts": [{"cause": "LABOUR", "delay_days": 2}]}
+{"order_item_id": 9451, "template_id": null, "delay_facts": []}
+{"order_item_id": 41023, "template_id": null, "delay_facts": []}
+{"order_item_id": 37149, "template_id": "B03", "delay_facts": []}
+{"order_item_id": 96979, "template_id": "T15", "delay_facts": [{"cause": "MECHANICAL", "delay_days": 4}]}
+{"order_item_id": 10127, "template_id": "T16", "delay_facts": [{"cause": "ADDRESS_ISSUE", "delay_days": 3}]}
+{"order_item_id": 73621, "template_id": "T25", "delay_facts": [{"cause": "UNKNOWN", "delay_days": 1}]}
+{"order_item_id": 154663, "template_id": null, "delay_facts": []}
+{"order_item_id": 15148, "template_id": "T11", "delay_facts": [{"cause": "LABOUR", "delay_days": 2, "location": "Chicago"}]}
+{"order_item_id": 107669, "template_id": null, "delay_facts": []}
+{"order_item_id": 49811, "template_id": "B02", "delay_facts": []}
+{"order_item_id": 53417, "template_id": "T22", "delay_facts": [{"cause": "UNKNOWN", "delay_days": 1}]}
+{"order_item_id": 11479, "template_id": "T04", "delay_facts": [{"cause": "CUSTOMS", "delay_hours": 94, "location": "Singapore"}]}
+{"order_item_id": 143402, "template_id": null, "delay_facts": []}
+{"order_item_id": 166455, "template_id": "T30", "delay_facts": [{"cause": "ADDRESS_ISSUE", "delay_days": 3}, {"cause": "LABOUR", "delay_days": 1}]}
+{"order_item_id": 59321, "template_id": "T03", "delay_facts": [{"cause": "PORT_CONGESTION", "delay_days": 1, "location": "Durban"}]}
+{"order_item_id": 157513, "template_id": null, "delay_facts": []}
+{"order_item_id": 53112, "template_id": "T11", "delay_facts": [{"cause": "LABOUR", "delay_days": 1, "location": "Dubai"}]}
+{"order_item_id": 1839, "template_id": null, "delay_facts": []}
+{"order_item_id": 123192, "template_id": "T07", "delay_facts": [{"cause": "WEATHER", "delay_days": 2, "location": "Dallas-Atlanta"}]}
+{"order_item_id": 100910, "template_id": null, "delay_facts": []}
+{"order_item_id": 34721, "template_id": "T02", "delay_facts": [{"cause": "PORT_CONGESTION", "delay_days": 1, "location": "Busan"}]}
+{"order_item_id": 114845, "template_id": "T16", "delay_facts": [{"cause": "ADDRESS_ISSUE", "delay_days": 1}]}
+{"order_item_id": 53211, "template_id": null, "delay_facts": []}
+{"order_item_id": 88123, "template_id": null, "delay_facts": []}
+{"order_item_id": 87925, "template_id": "T03", "delay_facts": [{"cause": "PORT_CONGESTION", "delay_days": 2, "location": "Durban"}]}
+{"order_item_id": 10382, "template_id": "T07", "delay_facts": [{"cause": "WEATHER", "delay_days": 1, "location": "Dallas-Atlanta"}]}
+{"order_item_id": 53839, "template_id": "T22", "delay_facts": [{"cause": "UNKNOWN", "delay_days": 3}]}
+{"order_item_id": 140907, "template_id": "B01", "delay_facts": []}
+{"order_item_id": 22615, "template_id": null, "delay_facts": []}
+{"order_item_id": 21407, "template_id": null, "delay_facts": []}
+{"order_item_id": 118461, "template_id": "T23", "delay_facts": [{"cause": "UNKNOWN"}]}
+{"order_item_id": 37967, "template_id": "T21", "delay_facts": [{"cause": "CAPACITY", "delay_days": 3, "location": "Leipzig"}]}
+{"order_item_id": 40247, "template_id": "T17", "delay_facts": [{"cause": "ADDRESS_ISSUE", "delay_hours": 56, "location": "Chicago"}]}
+{"order_item_id": 2628, "template_id": "B02", "delay_facts": []}
+{"order_item_id": 45841, "template_id": "T15", "delay_facts": [{"cause": "MECHANICAL", "delay_days": 2}]}
+{"order_item_id": 25076, "template_id": "T03", "delay_facts": [{"cause": "PORT_CONGESTION", "delay_days": 1, "location": "Durban"}]}
+{"order_item_id": 106544, "template_id": "T15", "delay_facts": [{"cause": "MECHANICAL", "delay_days": 1}]}
+{"order_item_id": 60273, "template_id": "T16", "delay_facts": [{"cause": "ADDRESS_ISSUE", "delay_days": 1}]}
+{"order_item_id": 147916, "template_id": null, "delay_facts": []}
+{"order_item_id": 19822, "template_id": null, "delay_facts": []}
+{"order_item_id": 110726, "template_id": "T06", "delay_facts": [{"cause": "CUSTOMS", "delay_days": 1}]}
+{"order_item_id": 55913, "template_id": "T01", "delay_facts": [{"cause": "PORT_CONGESTION", "secondary_cause": "CUSTOMS", "delay_hours": 16}]}
+{"order_item_id": 142527, "template_id": null, "delay_facts": []}
+{"order_item_id": 88436, "template_id": null, "delay_facts": []}
+{"order_item_id": 165242, "template_id": "T18", "delay_facts": [{"cause": "ADDRESS_ISSUE", "delay_days": 3}]}
+{"order_item_id": 153467, "template_id": "T26", "delay_facts": [{"cause": "WEATHER", "secondary_cause": "PORT_CONGESTION", "delay_days": 2, "location": "Durban"}]}
+{"order_item_id": 169324, "template_id": null, "delay_facts": []}
+{"order_item_id": 162343, "template_id": null, "delay_facts": []}
+{"order_item_id": 95806, "template_id": "T19", "delay_facts": [{"cause": "CAPACITY", "delay_days": 1}]}
+{"order_item_id": 81597, "template_id": "B05", "delay_facts": []}
+{"order_item_id": 16398, "template_id": "T22", "delay_facts": [{"cause": "UNKNOWN", "delay_days": 3}]}
+{"order_item_id": 152777, "template_id": "T26", "delay_facts": [{"cause": "WEATHER", "secondary_cause": "PORT_CONGESTION", "delay_days": 1, "location": "Busan"}]}
+{"order_item_id": 76162, "template_id": "T24", "delay_facts": [{"cause": "UNKNOWN", "delay_hours": 34, "location": "Chicago"}]}
+{"order_item_id": 115612, "template_id": null, "delay_facts": []}
+{"order_item_id": 58844, "template_id": null, "delay_facts": []}
+{"order_item_id": 113184, "template_id": "T05", "delay_facts": [{"cause": "CUSTOMS", "delay_days": 1}]}
+{"order_item_id": 175391, "template_id": null, "delay_facts": []}
+{"order_item_id": 74532, "template_id": "T01", "delay_facts": [{"cause": "PORT_CONGESTION", "secondary_cause": "CUSTOMS", "delay_hours": 13}]}
+{"order_item_id": 75784, "template_id": null, "delay_facts": []}
+{"order_item_id": 171711, "template_id": "T20", "delay_facts": [{"cause": "CAPACITY", "delay_hours": 9}]}
+{"order_item_id": 74995, "template_id": "T13", "delay_facts": [{"cause": "MECHANICAL", "delay_hours": 55, "location": "Denver"}]}
+{"order_item_id": 49078, "template_id": "T19", "delay_facts": [{"cause": "CAPACITY", "delay_days": 2}]}
+{"order_item_id": 76134, "template_id": "B03", "delay_facts": []}
+{"order_item_id": 4219, "template_id": "T08", "delay_facts": [{"cause": "WEATHER", "delay_hours": 43, "location": "Memphis"}]}
+{"order_item_id": 26554, "template_id": null, "delay_facts": []}
+{"order_item_id": 55813, "template_id": "T04", "delay_facts": [{"cause": "CUSTOMS", "delay_hours": 8, "location": "Long Beach"}]}
+{"order_item_id": 8478, "template_id": null, "delay_facts": []}
+{"order_item_id": 126989, "template_id": "T06", "delay_facts": [{"cause": "CUSTOMS", "delay_days": 1}]}
+{"order_item_id": 150594, "template_id": "T14", "delay_facts": [{"cause": "MECHANICAL", "delay_days": 1}]}
+{"order_item_id": 135257, "template_id": "T05", "delay_facts": [{"cause": "CUSTOMS", "delay_days": 1}]}
+{"order_item_id": 39313, "template_id": null, "delay_facts": []}
+{"order_item_id": 143789, "template_id": null, "delay_facts": []}
+{"order_item_id": 84555, "template_id": "T20", "delay_facts": [{"cause": "CAPACITY", "delay_hours": 79}]}
+{"order_item_id": 5817, "template_id": "T27", "delay_facts": [{"cause": "CUSTOMS", "secondary_cause": "LABOUR", "delay_days": 2}]}
+{"order_item_id": 139343, "template_id": "T08", "delay_facts": [{"cause": "WEATHER", "delay_hours": 7, "location": "Dubai"}]}
+{"order_item_id": 135005, "template_id": "T15", "delay_facts": [{"cause": "MECHANICAL", "delay_days": 3}]}
+{"order_item_id": 19742, "template_id": null, "delay_facts": []}
+{"order_item_id": 57451, "template_id": "T22", "delay_facts": [{"cause": "UNKNOWN", "delay_days": 1}]}
+{"order_item_id": 26446, "template_id": null, "delay_facts": []}
+{"order_item_id": 102179, "template_id": "T18", "delay_facts": [{"cause": "ADDRESS_ISSUE", "delay_days": 1}]}
+{"order_item_id": 3236, "template_id": "T06", "delay_facts": [{"cause": "CUSTOMS", "delay_days": 1}]}
+{"order_item_id": 123432, "template_id": "B05", "delay_facts": []}
+{"order_item_id": 326, "template_id": "T22", "delay_facts": [{"cause": "UNKNOWN", "delay_days": 2}]}
+{"order_item_id": 107016, "template_id": "T01", "delay_facts": [{"cause": "PORT_CONGESTION", "secondary_cause": "CUSTOMS", "delay_hours": 9}]}
+{"order_item_id": 28363, "template_id": null, "delay_facts": []}
+{"order_item_id": 130409, "template_id": "T05", "delay_facts": [{"cause": "CUSTOMS", "delay_days": 4}]}
+{"order_item_id": 55248, "template_id": "T19", "delay_facts": [{"cause": "CAPACITY", "delay_days": 4}]}
+{"order_item_id": 2838, "template_id": "T21", "delay_facts": [{"cause": "CAPACITY", "delay_days": 4, "location": "Leipzig"}]}
+{"order_item_id": 108848, "template_id": null, "delay_facts": []}
+{"order_item_id": 56223, "template_id": "T03", "delay_facts": [{"cause": "PORT_CONGESTION", "delay_days": 2, "location": "Durban"}]}
+{"order_item_id": 39772, "template_id": "T23", "delay_facts": [{"cause": "UNKNOWN"}]}
+{"order_item_id": 82331, "template_id": "T22", "delay_facts": [{"cause": "UNKNOWN", "delay_days": 1}]}
+{"order_item_id": 160441, "template_id": "T01", "delay_facts": [{"cause": "PORT_CONGESTION", "secondary_cause": "CUSTOMS", "delay_hours": 52}]}
+{"order_item_id": 33279, "template_id": null, "delay_facts": []}
+{"order_item_id": 50505, "template_id": "T06", "delay_facts": [{"cause": "CUSTOMS", "delay_days": 1}]}
+{"order_item_id": 51328, "template_id": "T21", "delay_facts": [{"cause": "CAPACITY", "delay_days": 2, "location": "Leipzig"}]}
+{"order_item_id": 97725, "template_id": "T01", "delay_facts": [{"cause": "PORT_CONGESTION", "secondary_cause": "CUSTOMS", "delay_hours": 8}]}
+{"order_item_id": 177616, "template_id": null, "delay_facts": []}
+{"order_item_id": 24393, "template_id": null, "delay_facts": []}
+{"order_item_id": 85023, "template_id": null, "delay_facts": []}
+{"order_item_id": 22254, "template_id": "T15", "delay_facts": [{"cause": "MECHANICAL", "delay_days": 3}]}
+{"order_item_id": 82186, "template_id": "T24", "delay_facts": [{"cause": "UNKNOWN", "delay_hours": 1, "location": "Dubai"}]}
+{"order_item_id": 120873, "template_id": "T27", "delay_facts": [{"cause": "CUSTOMS", "secondary_cause": "LABOUR", "delay_days": 1}]}
+{"order_item_id": 32684, "template_id": "T13", "delay_facts": [{"cause": "MECHANICAL", "delay_hours": 96, "location": "Accra"}]}
+{"order_item_id": 18442, "template_id": "T06", "delay_facts": [{"cause": "CUSTOMS", "delay_days": 4}]}
+{"order_item_id": 95807, "template_id": "T04", "delay_facts": [{"cause": "CUSTOMS", "delay_hours": 7, "location": "Rotterdam"}]}
+{"order_item_id": 64505, "template_id": "T06", "delay_facts": [{"cause": "CUSTOMS", "delay_days": 3}]}
+{"order_item_id": 65533, "template_id": null, "delay_facts": []}
+{"order_item_id": 131782, "template_id": null, "delay_facts": []}
+{"order_item_id": 64093, "template_id": null, "delay_facts": []}
+{"order_item_id": 47330, "template_id": null, "delay_facts": []}
+{"order_item_id": 36142, "template_id": "T06", "delay_facts": [{"cause": "CUSTOMS", "delay_days": 4}]}
+{"order_item_id": 129655, "template_id": null, "delay_facts": []}
+{"order_item_id": 180210, "template_id": "T01", "delay_facts": [{"cause": "PORT_CONGESTION", "secondary_cause": "CUSTOMS", "delay_hours": 15}]}
+{"order_item_id": 94334, "template_id": "T14", "delay_facts": [{"cause": "MECHANICAL", "delay_days": 3}]}
+{"order_item_id": 62639, "template_id": "T04", "delay_facts": [{"cause": "CUSTOMS", "delay_hours": 63, "location": "Rotterdam"}]}
+{"order_item_id": 129806, "template_id": null, "delay_facts": []}
+{"order_item_id": 40881, "template_id": "T13", "delay_facts": [{"cause": "MECHANICAL", "delay_hours": 47, "location": "Denver"}]}
+{"order_item_id": 28857, "template_id": null, "delay_facts": []}
+{"order_item_id": 127899, "template_id": "T05", "delay_facts": [{"cause": "CUSTOMS", "delay_days": 1}]}
+{"order_item_id": 10854, "template_id": null, "delay_facts": []}
+{"order_item_id": 94447, "template_id": "T30", "delay_facts": [{"cause": "ADDRESS_ISSUE", "delay_days": 1}, {"cause": "LABOUR", "delay_days": 1}]}
+{"order_item_id": 3447, "template_id": "T11", "delay_facts": [{"cause": "LABOUR", "delay_days": 3, "location": "Dubai"}]}
+{"order_item_id": 4132, "template_id": "T02", "delay_facts": [{"cause": "PORT_CONGESTION", "delay_days": 1, "location": "Busan"}]}
+{"order_item_id": 167374, "template_id": "T20", "delay_facts": [{"cause": "CAPACITY", "delay_hours": 8}]}
+{"order_item_id": 28674, "template_id": "T16", "delay_facts": [{"cause": "ADDRESS_ISSUE", "delay_days": 2}]}
+{"order_item_id": 43433, "template_id": null, "delay_facts": []}
+{"order_item_id": 149450, "template_id": "T17", "delay_facts": [{"cause": "ADDRESS_ISSUE", "delay_hours": 24, "location": "Leipzig"}]}
+{"order_item_id": 35478, "template_id": "T03", "delay_facts": [{"cause": "PORT_CONGESTION", "delay_days": 2, "location": "Durban"}]}
+{"order_item_id": 166776, "template_id": "T24", "delay_facts": [{"cause": "UNKNOWN", "delay_hours": 69, "location": "Chicago"}]}
+{"order_item_id": 169182, "template_id": null, "delay_facts": []}
+{"order_item_id": 125769, "template_id": "T06", "delay_facts": [{"cause": "CUSTOMS", "delay_days": 1}]}
+{"order_item_id": 19766, "template_id": "T08", "delay_facts": [{"cause": "WEATHER", "delay_hours": 84, "location": "Leipzig"}]}
+{"order_item_id": 34538, "template_id": "T10", "delay_facts": [{"cause": "LABOUR", "delay_days": 2}]}
+{"order_item_id": 108833, "template_id": null, "delay_facts": []}
+{"order_item_id": 71939, "template_id": null, "delay_facts": []}
+{"order_item_id": 115978, "template_id": "T18", "delay_facts": [{"cause": "ADDRESS_ISSUE", "delay_days": 3}]}
+{"order_item_id": 70670, "template_id": "T05", "delay_facts": [{"cause": "CUSTOMS", "delay_days": 1}]}
+{"order_item_id": 100302, "template_id": null, "delay_facts": []}
+{"order_item_id": 109792, "template_id": "T04", "delay_facts": [{"cause": "CUSTOMS", "delay_hours": 33, "location": "Singapore"}]}
+{"order_item_id": 164523, "template_id": null, "delay_facts": []}
+{"order_item_id": 47718, "template_id": null, "delay_facts": []}
+{"order_item_id": 10873, "template_id": "T27", "delay_facts": [{"cause": "CUSTOMS", "secondary_cause": "LABOUR", "delay_days": 1}]}
+{"order_item_id": 79405, "template_id": "T02", "delay_facts": [{"cause": "PORT_CONGESTION", "delay_days": 1, "location": "Durban"}]}
+{"order_item_id": 176914, "template_id": "T27", "delay_facts": [{"cause": "CUSTOMS", "secondary_cause": "LABOUR", "delay_days": 1}]}
+{"order_item_id": 1188, "template_id": "T17", "delay_facts": [{"cause": "ADDRESS_ISSUE", "delay_hours": 55, "location": "Dubai"}]}
+{"order_item_id": 38715, "template_id": "B01", "delay_facts": []}
+{"order_item_id": 49819, "template_id": "B03", "delay_facts": []}
+{"order_item_id": 173066, "template_id": null, "delay_facts": []}
+{"order_item_id": 143117, "template_id": "T24", "delay_facts": [{"cause": "UNKNOWN", "delay_hours": 64, "location": "Chicago"}]}
+{"order_item_id": 123882, "template_id": null, "delay_facts": []}
+{"order_item_id": 146722, "template_id": null, "delay_facts": []}
+{"order_item_id": 19254, "template_id": "T12", "delay_facts": [{"cause": "LABOUR", "delay_hours": 52}]}
+{"order_item_id": 10667, "template_id": "T14", "delay_facts": [{"cause": "MECHANICAL", "delay_days": 1}]}
+{"order_item_id": 103827, "template_id": null, "delay_facts": []}
+{"order_item_id": 180456, "template_id": null, "delay_facts": []}
+{"order_item_id": 138842, "template_id": "T22", "delay_facts": [{"cause": "UNKNOWN", "delay_days": 3}]}
+{"order_item_id": 101682, "template_id": "T27", "delay_facts": [{"cause": "CUSTOMS", "secondary_cause": "LABOUR", "delay_days": 2}]}
+{"order_item_id": 19102, "template_id": null, "delay_facts": []}
+{"order_item_id": 119100, "template_id": null, "delay_facts": []}
+{"order_item_id": 144944, "template_id": "B02", "delay_facts": []}
+{"order_item_id": 24192, "template_id": "T24", "delay_facts": [{"cause": "UNKNOWN", "delay_hours": 77, "location": "Chicago"}]}
+{"order_item_id": 12772, "template_id": "T03", "delay_facts": [{"cause": "PORT_CONGESTION", "delay_days": 2, "location": "Long Beach"}]}
+{"order_item_id": 108793, "template_id": null, "delay_facts": []}
+{"order_item_id": 15175, "template_id": "T01", "delay_facts": [{"cause": "PORT_CONGESTION", "secondary_cause": "CUSTOMS", "delay_hours": 23}]}
+{"order_item_id": 122883, "template_id": "T18", "delay_facts": [{"cause": "ADDRESS_ISSUE", "delay_days": 1}]}
+{"order_item_id": 95942, "template_id": "T14", "delay_facts": [{"cause": "MECHANICAL", "delay_days": 4}]}
+{"order_item_id": 129984, "template_id": "B03", "delay_facts": []}
+{"order_item_id": 71159, "template_id": "T01", "delay_facts": [{"cause": "PORT_CONGESTION", "secondary_cause": "CUSTOMS", "delay_hours": 71}]}
+{"order_item_id": 26306, "template_id": "T08", "delay_facts": [{"cause": "WEATHER", "delay_hours": 46, "location": "Memphis"}]}
+{"order_item_id": 106743, "template_id": "T13", "delay_facts": [{"cause": "MECHANICAL", "delay_hours": 17, "location": "Brisbane"}]}
+{"order_item_id": 83184, "template_id": "T14", "delay_facts": [{"cause": "MECHANICAL", "delay_days": 1}]}
+{"order_item_id": 123793, "template_id": "T08", "delay_facts": [{"cause": "WEATHER", "delay_hours": 94, "location": "Leipzig"}]}
+{"order_item_id": 43477, "template_id": "B03", "delay_facts": []}
+{"order_item_id": 3581, "template_id": "T25", "delay_facts": [{"cause": "UNKNOWN", "delay_days": 1}]}
+{"order_item_id": 53391, "template_id": "T20", "delay_facts": [{"cause": "CAPACITY", "delay_hours": 47}]}
+{"order_item_id": 2860, "template_id": "T08", "delay_facts": [{"cause": "WEATHER", "delay_hours": 63, "location": "Memphis"}]}
+{"order_item_id": 75719, "template_id": "T13", "delay_facts": [{"cause": "MECHANICAL", "delay_hours": 21, "location": "Accra"}]}
+{"order_item_id": 108535, "template_id": null, "delay_facts": []}
+{"order_item_id": 144216, "template_id": "T15", "delay_facts": [{"cause": "MECHANICAL", "delay_days": 4}]}
+{"order_item_id": 178377, "template_id": "B05", "delay_facts": []}
+{"order_item_id": 88470, "template_id": null, "delay_facts": []}
+{"order_item_id": 5472, "template_id": "T14", "delay_facts": [{"cause": "MECHANICAL", "delay_days": 4}]}
+{"order_item_id": 56926, "template_id": null, "delay_facts": []}
+{"order_item_id": 27194, "template_id": "T15", "delay_facts": [{"cause": "MECHANICAL", "delay_days": 1}]}
+{"order_item_id": 170113, "template_id": "T08", "delay_facts": [{"cause": "WEATHER", "delay_hours": 74, "location": "Memphis"}]}
+{"order_item_id": 55897, "template_id": null, "delay_facts": []}
+{"order_item_id": 91564, "template_id": "T02", "delay_facts": [{"cause": "PORT_CONGESTION", "delay_days": 2, "location": "Rotterdam"}]}
+{"order_item_id": 48411, "template_id": "B05", "delay_facts": []}
+{"order_item_id": 128194, "template_id": "T22", "delay_facts": [{"cause": "UNKNOWN", "delay_days": 1}]}
+{"order_item_id": 22678, "template_id": "B05", "delay_facts": []}
+{"order_item_id": 52365, "template_id": "T12", "delay_facts": [{"cause": "LABOUR", "delay_hours": 59}]}
+{"order_item_id": 163724, "template_id": "T02", "delay_facts": [{"cause": "PORT_CONGESTION", "delay_days": 4, "location": "Long Beach"}]}
+{"order_item_id": 33522, "template_id": "T10", "delay_facts": [{"cause": "LABOUR", "delay_days": 1}]}
+{"order_item_id": 152143, "template_id": "T01", "delay_facts": [{"cause": "PORT_CONGESTION", "secondary_cause": "CUSTOMS", "delay_hours": 91}]}
+{"order_item_id": 21653, "template_id": "B01", "delay_facts": []}
+{"order_item_id": 171754, "template_id": "T22", "delay_facts": [{"cause": "UNKNOWN", "delay_days": 1}]}
+{"order_item_id": 162742, "template_id": "T23", "delay_facts": [{"cause": "UNKNOWN"}]}
+{"order_item_id": 72316, "template_id": null, "delay_facts": []}
+{"order_item_id": 109481, "template_id": null, "delay_facts": []}
+{"order_item_id": 123035, "template_id": "T21", "delay_facts": [{"cause": "CAPACITY", "delay_days": 1, "location": "Louisville"}]}
+{"order_item_id": 144708, "template_id": "T06", "delay_facts": [{"cause": "CUSTOMS", "delay_days": 2}]}
+{"order_item_id": 80644, "template_id": "T15", "delay_facts": [{"cause": "MECHANICAL", "delay_days": 4}]}
+{"order_item_id": 128160, "template_id": "T13", "delay_facts": [{"cause": "MECHANICAL", "delay_hours": 42, "location": "Pune"}]}
+{"order_item_id": 49442, "template_id": null, "delay_facts": []}
+{"order_item_id": 77952, "template_id": null, "delay_facts": []}
+{"order_item_id": 178163, "template_id": "B02", "delay_facts": []}
+{"order_item_id": 61943, "template_id": "T08", "delay_facts": [{"cause": "WEATHER", "delay_hours": 65, "location": "Louisville"}]}
+{"order_item_id": 119668, "template_id": "T12", "delay_facts": [{"cause": "LABOUR", "delay_hours": 59}]}
+{"order_item_id": 85659, "template_id": "T14", "delay_facts": [{"cause": "MECHANICAL", "delay_days": 1}]}
+{"order_item_id": 42711, "template_id": "T07", "delay_facts": [{"cause": "WEATHER", "delay_days": 1, "location": "I-80 eastbound"}]}
+{"order_item_id": 122849, "template_id": null, "delay_facts": []}
+{"order_item_id": 98479, "template_id": "T19", "delay_facts": [{"cause": "CAPACITY", "delay_days": 1}]}
+{"order_item_id": 99358, "template_id": "T06", "delay_facts": [{"cause": "CUSTOMS", "delay_days": 1}]}
+{"order_item_id": 134046, "template_id": "T13", "delay_facts": [{"cause": "MECHANICAL", "delay_hours": 39, "location": "Denver"}]}
+{"order_item_id": 45981, "template_id": null, "delay_facts": []}
+{"order_item_id": 171056, "template_id": "B01", "delay_facts": []}
+{"order_item_id": 177169, "template_id": "T29", "delay_facts": [{"cause": "CUSTOMS", "delay_days": 1}, {"cause": "CAPACITY", "delay_days": 2}]}
+{"order_item_id": 122069, "template_id": "T08", "delay_facts": [{"cause": "WEATHER", "delay_hours": 17, "location": "Louisville"}]}
+{"order_item_id": 39370, "template_id": "T30", "delay_facts": [{"cause": "ADDRESS_ISSUE", "delay_days": 2}, {"cause": "LABOUR", "delay_days": 1}]}
+{"order_item_id": 174619, "template_id": "T15", "delay_facts": [{"cause": "MECHANICAL", "delay_days": 1}]}
+{"order_item_id": 143739, "template_id": "T17", "delay_facts": [{"cause": "ADDRESS_ISSUE", "delay_hours": 26, "location": "Leipzig"}]}
+{"order_item_id": 3566, "template_id": "T10", "delay_facts": [{"cause": "LABOUR", "delay_days": 1}]}
+{"order_item_id": 22992, "template_id": null, "delay_facts": []}
+{"order_item_id": 132987, "template_id": null, "delay_facts": []}
+{"order_item_id": 48701, "template_id": null, "delay_facts": []}
+{"order_item_id": 23563, "template_id": "T06", "delay_facts": [{"cause": "CUSTOMS", "delay_days": 1}]}
+{"order_item_id": 140108, "template_id": "T19", "delay_facts": [{"cause": "CAPACITY", "delay_days": 1}]}
+{"order_item_id": 53983, "template_id": null, "delay_facts": []}
+{"order_item_id": 16240, "template_id": "T13", "delay_facts": [{"cause": "MECHANICAL", "delay_hours": 3, "location": "Denver"}]}
+{"order_item_id": 82683, "template_id": "T20", "delay_facts": [{"cause": "CAPACITY", "delay_hours": 65}]}
+{"order_item_id": 165063, "template_id": "T13", "delay_facts": [{"cause": "MECHANICAL", "delay_hours": 16, "location": "Denver"}]}
+{"order_item_id": 145168, "template_id": "T02", "delay_facts": [{"cause": "PORT_CONGESTION", "delay_days": 2, "location": "Durban"}]}
+{"order_item_id": 109207, "template_id": "T23", "delay_facts": [{"cause": "UNKNOWN"}]}
+{"order_item_id": 96930, "template_id": null, "delay_facts": []}
+{"order_item_id": 76071, "template_id": null, "delay_facts": []}
+{"order_item_id": 33808, "template_id": "B02", "delay_facts": []}
+{"order_item_id": 119466, "template_id": "T17", "delay_facts": [{"cause": "ADDRESS_ISSUE", "delay_hours": 5, "location": "Dubai"}]}
+{"order_item_id": 177560, "template_id": "T22", "delay_facts": [{"cause": "UNKNOWN", "delay_days": 4}]}
+{"order_item_id": 13749, "template_id": "T01", "delay_facts": [{"cause": "PORT_CONGESTION", "secondary_cause": "CUSTOMS", "delay_hours": 34}]}
+{"order_item_id": 6062, "template_id": null, "delay_facts": []}
+{"order_item_id": 119235, "template_id": null, "delay_facts": []}
+{"order_item_id": 164682, "template_id": null, "delay_facts": []}
+{"order_item_id": 39454, "template_id": null, "delay_facts": []}
+{"order_item_id": 53109, "template_id": "T03", "delay_facts": [{"cause": "PORT_CONGESTION", "delay_days": 1, "location": "Busan"}]}
+{"order_item_id": 51743, "template_id": "T09", "delay_facts": [{"cause": "WEATHER", "delay_days": 3, "location": "Denver"}]}
+{"order_item_id": 147533, "template_id": "T27", "delay_facts": [{"cause": "CUSTOMS", "secondary_cause": "LABOUR", "delay_days": 2}]}
+{"order_item_id": 81388, "template_id": "T30", "delay_facts": [{"cause": "ADDRESS_ISSUE", "delay_days": 1}, {"cause": "LABOUR", "delay_days": 1}]}
+{"order_item_id": 126286, "template_id": null, "delay_facts": []}
+{"order_item_id": 179984, "template_id": "T27", "delay_facts": [{"cause": "CUSTOMS", "secondary_cause": "LABOUR", "delay_days": 3}]}
+{"order_item_id": 136744, "template_id": null, "delay_facts": []}
+{"order_item_id": 134864, "template_id": "T25", "delay_facts": [{"cause": "UNKNOWN", "delay_days": 4}]}
+{"order_item_id": 37010, "template_id": "T18", "delay_facts": [{"cause": "ADDRESS_ISSUE", "delay_days": 4}]}
+{"order_item_id": 143261, "template_id": "T02", "delay_facts": [{"cause": "PORT_CONGESTION", "delay_days": 2, "location": "Busan"}]}
+{"order_item_id": 173843, "template_id": null, "delay_facts": []}
+{"order_item_id": 22413, "template_id": "T04", "delay_facts": [{"cause": "CUSTOMS", "delay_hours": 80, "location": "Busan"}]}
+{"order_item_id": 9932, "template_id": null, "delay_facts": []}
+{"order_item_id": 16592, "template_id": "T13", "delay_facts": [{"cause": "MECHANICAL", "delay_hours": 22, "location": "Pune"}]}
+{"order_item_id": 6315, "template_id": "T17", "delay_facts": [{"cause": "ADDRESS_ISSUE", "delay_hours": 19, "location": "Memphis"}]}
+{"order_item_id": 157739, "template_id": "T02", "delay_facts": [{"cause": "PORT_CONGESTION", "delay_days": 1, "location": "Santos"}]}
+{"order_item_id": 79287, "template_id": null, "delay_facts": []}
+{"order_item_id": 84436, "template_id": "T04", "delay_facts": [{"cause": "CUSTOMS", "delay_hours": 10, "location": "Felixstowe"}]}
+{"order_item_id": 22673, "template_id": "T29", "delay_facts": [{"cause": "CUSTOMS", "delay_days": 2}, {"cause": "CAPACITY", "delay_days": 2}]}
+{"order_item_id": 17578, "template_id": "T15", "delay_facts": [{"cause": "MECHANICAL", "delay_days": 1}]}
+{"order_item_id": 70067, "template_id": "T24", "delay_facts": [{"cause": "UNKNOWN", "delay_hours": 71, "location": "Dubai"}]}
+{"order_item_id": 175166, "template_id": "T17", "delay_facts": [{"cause": "ADDRESS_ISSUE", "delay_hours": 15, "location": "Atlanta"}]}
+{"order_item_id": 71486, "template_id": null, "delay_facts": []}
+{"order_item_id": 6026, "template_id": "T06", "delay_facts": [{"cause": "CUSTOMS", "delay_days": 1}]}
+{"order_item_id": 77565, "template_id": "B01", "delay_facts": []}
+{"order_item_id": 62368, "template_id": "T08", "delay_facts": [{"cause": "WEATHER", "delay_hours": 87, "location": "Louisville"}]}
+{"order_item_id": 39265, "template_id": "T19", "delay_facts": [{"cause": "CAPACITY", "delay_days": 4}]}
+{"order_item_id": 61448, "template_id": "T08", "delay_facts": [{"cause": "WEATHER", "delay_hours": 73, "location": "Memphis"}]}
+{"order_item_id": 113429, "template_id": "T10", "delay_facts": [{"cause": "LABOUR", "delay_days": 1}]}
+{"order_item_id": 29697, "template_id": null, "delay_facts": []}
+{"order_item_id": 168586, "template_id": "T22", "delay_facts": [{"cause": "UNKNOWN", "delay_days": 3}]}
+{"order_item_id": 25934, "template_id": "T05", "delay_facts": [{"cause": "CUSTOMS", "delay_days": 2}]}
+{"order_item_id": 104632, "template_id": "T01", "delay_facts": [{"cause": "PORT_CONGESTION", "secondary_cause": "CUSTOMS", "delay_hours": 39}]}
+{"order_item_id": 86669, "template_id": null, "delay_facts": []}
+{"order_item_id": 46629, "template_id": "T29", "delay_facts": [{"cause": "CUSTOMS", "delay_days": 2}, {"cause": "CAPACITY", "delay_days": 2}]}
+{"order_item_id": 21996, "template_id": "T10", "delay_facts": [{"cause": "LABOUR", "delay_days": 4}]}
+{"order_item_id": 34072, "template_id": "T24", "delay_facts": [{"cause": "UNKNOWN", "delay_hours": 7, "location": "Leipzig"}]}
+{"order_item_id": 12984, "template_id": "T18", "delay_facts": [{"cause": "ADDRESS_ISSUE", "delay_days": 1}]}
+{"order_item_id": 16189, "template_id": null, "delay_facts": []}
+{"order_item_id": 175300, "template_id": "T01", "delay_facts": [{"cause": "PORT_CONGESTION", "secondary_cause": "CUSTOMS", "delay_hours": 78}]}
+{"order_item_id": 125372, "template_id": "T28", "delay_facts": [{"cause": "WEATHER", "delay_days": 1, "location": "Louisville"}, {"cause": "MECHANICAL", "delay_days": 1}]}
+{"order_item_id": 58136, "template_id": "T27", "delay_facts": [{"cause": "CUSTOMS", "secondary_cause": "LABOUR", "delay_days": 3}]}
+{"order_item_id": 44359, "template_id": "T04", "delay_facts": [{"cause": "CUSTOMS", "delay_hours": 41, "location": "Rotterdam"}]}
+{"order_item_id": 161840, "template_id": null, "delay_facts": []}
+{"order_item_id": 17778, "template_id": "T24", "delay_facts": [{"cause": "UNKNOWN", "delay_hours": 28, "location": "Memphis"}]}
+{"order_item_id": 22785, "template_id": "T26", "delay_facts": [{"cause": "WEATHER", "secondary_cause": "PORT_CONGESTION", "delay_days": 1, "location": "Busan"}]}
+{"order_item_id": 82328, "template_id": "T24", "delay_facts": [{"cause": "UNKNOWN", "delay_hours": 66, "location": "Atlanta"}]}
+{"order_item_id": 19905, "template_id": "T22", "delay_facts": [{"cause": "UNKNOWN", "delay_days": 2}]}
+{"order_item_id": 109842, "template_id": null, "delay_facts": []}
+{"order_item_id": 7764, "template_id": null, "delay_facts": []}
+{"order_item_id": 5409, "template_id": "T03", "delay_facts": [{"cause": "PORT_CONGESTION", "delay_days": 3, "location": "Rotterdam"}]}
+{"order_item_id": 164473, "template_id": "T09", "delay_facts": [{"cause": "WEATHER", "delay_days": 1, "location": "Denver"}]}
+{"order_item_id": 67250, "template_id": null, "delay_facts": []}
+{"order_item_id": 15951, "template_id": "T28", "delay_facts": [{"cause": "WEATHER", "delay_days": 1, "location": "Chicago"}, {"cause": "MECHANICAL", "delay_days": 1}]}
+{"order_item_id": 107940, "template_id": "T03", "delay_facts": [{"cause": "PORT_CONGESTION", "delay_days": 2, "location": "Long Beach"}]}
+{"order_item_id": 146205, "template_id": null, "delay_facts": []}
+{"order_item_id": 4068, "template_id": null, "delay_facts": []}
+{"order_item_id": 32876, "template_id": "T15", "delay_facts": [{"cause": "MECHANICAL", "delay_days": 1}]}
+{"order_item_id": 161858, "template_id": "B02", "delay_facts": []}
+{"order_item_id": 73565, "template_id": null, "delay_facts": []}
+{"order_item_id": 62665, "template_id": null, "delay_facts": []}
+{"order_item_id": 163371, "template_id": "T02", "delay_facts": [{"cause": "PORT_CONGESTION", "delay_days": 3, "location": "Singapore"}]}
+{"order_item_id": 44218, "template_id": "T21", "delay_facts": [{"cause": "CAPACITY", "delay_days": 1, "location": "Memphis"}]}
+{"order_item_id": 128178, "template_id": null, "delay_facts": []}
+{"order_item_id": 150114, "template_id": null, "delay_facts": []}
+{"order_item_id": 171046, "template_id": "T27", "delay_facts": [{"cause": "CUSTOMS", "secondary_cause": "LABOUR", "delay_days": 1}]}
+{"order_item_id": 60522, "template_id": null, "delay_facts": []}
+{"order_item_id": 71480, "template_id": "T12", "delay_facts": [{"cause": "LABOUR", "delay_hours": 16}]}
+{"order_item_id": 72468, "template_id": null, "delay_facts": []}
+{"order_item_id": 72096, "template_id": null, "delay_facts": []}
+{"order_item_id": 30086, "template_id": "T20", "delay_facts": [{"cause": "CAPACITY", "delay_hours": 4}]}
+{"order_item_id": 122730, "template_id": "T15", "delay_facts": [{"cause": "MECHANICAL", "delay_days": 1}]}
+{"order_item_id": 123435, "template_id": "T23", "delay_facts": [{"cause": "UNKNOWN"}]}
+{"order_item_id": 78865, "template_id": "T02", "delay_facts": [{"cause": "PORT_CONGESTION", "delay_days": 1, "location": "Rotterdam"}]}
+{"order_item_id": 64569, "template_id": "T18", "delay_facts": [{"cause": "ADDRESS_ISSUE", "delay_days": 1}]}
+{"order_item_id": 71901, "template_id": "T12", "delay_facts": [{"cause": "LABOUR", "delay_hours": 23}]}
+{"order_item_id": 71659, "template_id": "T21", "delay_facts": [{"cause": "CAPACITY", "delay_days": 4, "location": "Atlanta"}]}
+{"order_item_id": 71941, "template_id": "B02", "delay_facts": []}
+{"order_item_id": 8812, "template_id": "T07", "delay_facts": [{"cause": "WEATHER", "delay_days": 1, "location": "Dallas-Atlanta"}]}
+{"order_item_id": 111849, "template_id": null, "delay_facts": []}
+{"order_item_id": 1132, "template_id": null, "delay_facts": []}
+{"order_item_id": 71035, "template_id": null, "delay_facts": []}
+{"order_item_id": 35864, "template_id": "T06", "delay_facts": [{"cause": "CUSTOMS", "delay_days": 2}]}
+{"order_item_id": 175822, "template_id": null, "delay_facts": []}
+{"order_item_id": 165246, "template_id": "T01", "delay_facts": [{"cause": "PORT_CONGESTION", "secondary_cause": "CUSTOMS", "delay_hours": 90}]}
+{"order_item_id": 144886, "template_id": "B04", "delay_facts": []}
+{"order_item_id": 96819, "template_id": "T06", "delay_facts": [{"cause": "CUSTOMS", "delay_days": 3}]}
+{"order_item_id": 176151, "template_id": "B02", "delay_facts": []}
+{"order_item_id": 4622, "template_id": "T24", "delay_facts": [{"cause": "UNKNOWN", "delay_hours": 41, "location": "Leipzig"}]}
+{"order_item_id": 164141, "template_id": "T16", "delay_facts": [{"cause": "ADDRESS_ISSUE", "delay_days": 1}]}
+{"order_item_id": 169628, "template_id": null, "delay_facts": []}
+{"order_item_id": 16129, "template_id": "T24", "delay_facts": [{"cause": "UNKNOWN", "delay_hours": 17, "location": "Louisville"}]}
+{"order_item_id": 117573, "template_id": null, "delay_facts": []}
+{"order_item_id": 114086, "template_id": "T16", "delay_facts": [{"cause": "ADDRESS_ISSUE", "delay_days": 2}]}
+{"order_item_id": 155067, "template_id": "T03", "delay_facts": [{"cause": "PORT_CONGESTION", "delay_days": 3, "location": "Santos"}]}
+{"order_item_id": 115039, "template_id": null, "delay_facts": []}
+{"order_item_id": 25277, "template_id": null, "delay_facts": []}
+{"order_item_id": 148801, "template_id": "T09", "delay_facts": [{"cause": "WEATHER", "delay_days": 1, "location": "Accra"}]}
+{"order_item_id": 114615, "template_id": "T23", "delay_facts": [{"cause": "UNKNOWN"}]}
+{"order_item_id": 97589, "template_id": "T23", "delay_facts": [{"cause": "UNKNOWN"}]}
+{"order_item_id": 49406, "template_id": "T12", "delay_facts": [{"cause": "LABOUR", "delay_hours": 14}]}
+{"order_item_id": 26758, "template_id": null, "delay_facts": []}
+{"order_item_id": 156247, "template_id": "B04", "delay_facts": []}
+{"order_item_id": 71497, "template_id": "T29", "delay_facts": [{"cause": "CUSTOMS", "delay_days": 1}, {"cause": "CAPACITY", "delay_days": 1}]}
+{"order_item_id": 135232, "template_id": null, "delay_facts": []}
+{"order_item_id": 103791, "template_id": "T19", "delay_facts": [{"cause": "CAPACITY", "delay_days": 1}]}
+{"order_item_id": 78364, "template_id": null, "delay_facts": []}
