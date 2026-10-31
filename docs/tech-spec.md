@@ -86,12 +86,12 @@ Sixteen columns. All other DataCo columns are dropped at ingest. `BUILD`: verify
 |---------|----------------|-------|
 | S1 negative profit | `benefit_per_order < 0` | 20% |
 | S2 severe delay | `days_shipping_real - days_shipping_scheduled >= 3` | 20% |
-| S3 late-risk flagged, on-time | `late_delivery_risk == 1 AND delivery_status != 'Late delivery'` | 10% |
+| S3 risk flag contradicts delay (D14) | `delay_days > 0 AND late_delivery_risk == 0` | 10% |
 | S4 cancelled / suspected fraud | `order_status IN ('CANCELED','SUSPECTED_FRAUD')` | 10% |
 | S5 high-value | `sales >= p95(sales)` | 10% |
 | S6 baseline | none of the above | 30% |
 
-Strata are disjoint; rows matching multiple rules are assigned to the first matching stratum in table order. Resulting file: `data/golden/golden_500.csv` plus `data/golden/golden_500.strata.json`.
+Strata are disjoint; rows matching multiple rules are assigned to the first matching stratum in table order. Row order (D14): 5 blocks of 100, each holding the exact stratum shares (20/20/10/10/10/30), shuffled within the block; the pilot uses block 1. Resulting file: `data/golden/golden_500.csv` plus `data/golden/golden_500.strata.json`.
 
 ### TS-2.4 Ground truth
 
@@ -111,6 +111,8 @@ risk_class               enum     {NONE, LATE, SEVERE_LATE, LOSS_MAKING, FRAUD_H
 `risk_class` rule (deterministic, in this order): `FRAUD_HOLD` if `order_status == 'SUSPECTED_FRAUD'`; `LOSS_MAKING` if `benefit_per_order < 0`; `SEVERE_LATE` if `delay_days >= 3`; `LATE` if `delay_days > 0`; else `NONE`.
 
 > **Note on OQ-2.** The original spec's "financial variance" is `Sales − Benefit per order`. In DataCo, `Benefit per order` is profit, so that quantity is cost basis, not margin variance. This spec computes it under the correct name (`cost_basis`) and adds `profit_ratio_delta` as the reconciliation check. Which one headlines "financial accuracy" is OQ-2.
+>
+> **Note on D13.** DataCo's `Order Item Profit Ratio` is computed from post-discount `Order Item Total`, not `Sales`, so `profit_ratio_delta` mostly reflects the discount. It is kept as defined and described as such; it is not a reconciliation check.
 
 ---
 
