@@ -1,0 +1,64 @@
+# Hand-written parts of the 3 held-out few-shot examples (TS-4.2, TS-4.5, D17).
+# `python -m src.fewshot` combines these with the DataCo rows into fewshot.json.
+#
+# Rows: picked with numpy default_rng([20261029, 2]) from DataCo rows whose
+# order_id is NOT in the golden set, one per situation below.
+#
+# No answer leakage (tested):
+#   - renamed headers are NOT in src/noise/rename_pool.yaml
+#   - carrier notes do NOT match any template in src/noise/note_templates.yaml
+#
+# Reports: every sentence cites at least one FactList key in brackets; every
+# number appears in the FactList (rounded to the decimals shown). Fact keys
+# follow src/facts.py: F1-F15 row fields, F16 cost_basis, F17
+# profit_ratio_recomputed, F18 profit_ratio_delta, F19 delay_days,
+# F20 risk_class, F21+ delay facts.
+
+examples:
+  - id: FS1
+    order_item_id: 131900
+    situation: "late by 1 day, profitable, one carrier fact"
+    renames:
+      sales: SaleAmt
+      days_shipping_real: real_ship_days
+    carrier_notes: "Tyre blowout on the linehaul near Lima put the consignment 1 day behind plan."
+    delay_facts:
+      - {cause: MECHANICAL, delay_days: 1, location: Lima}
+    report: >-
+      Risk class LATE [F20]: shipped in 2 days against 1 scheduled [F6][F7],
+      a delay of 1 day [F19]. The carrier cites a mechanical fault near Lima
+      [F21][F23]. Margin stayed positive: sales 129.99, cost basis 126.36,
+      recomputed profit ratio 0.0279 [F2][F16][F17].
+
+  - id: FS2
+    order_item_id: 69150
+    situation: "shipped early, loss-making, benign note"
+    renames:
+      benefit_per_order: ProfitOrd
+      order_status: order_state_code
+      category_name: "Cat."
+    carrier_notes: "Arrived ahead of plan, nothing to flag."
+    delay_facts: []
+    report: >-
+      Risk class LOSS_MAKING [F20]: benefit per order was -48.00 on sales of
+      199.99 [F3][F2], a recomputed profit ratio of -0.24 [F17]. Cost basis was
+      247.99 [F16]. Delivery was early: 3 days against 4 scheduled [F6][F7],
+      with advance shipping status [F8].
+
+  - id: FS3
+    order_item_id: 80772
+    situation: "severe delay of 4 days, profitable, two carrier facts in mixed units"
+    renames:
+      delivery_status: dlvryStatus
+      order_item_profit_ratio: pr_ratio
+      shipping_date: ShipDate
+    carrier_notes: "Dock workers walked out at Savannah for 72 hrs, then customs flagged the paperwork for one more day."
+    delay_facts:
+      - {cause: LABOUR, delay_hours: 72, location: Savannah}
+      - {cause: CUSTOMS, delay_days: 1}
+    report: >-
+      Risk class SEVERE_LATE [F20]: shipped in 6 days against 2 scheduled
+      [F6][F7], a delay of 4 days [F19]. The carrier reports a labour stoppage
+      at Savannah lasting 72 hours [F21][F23][F22], followed by a customs hold
+      of 1 day [F24][F25]. The order is still profitable, with cost basis
+      181.92 on sales of 250.00 [F16][F2].

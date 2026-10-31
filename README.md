@@ -6,7 +6,7 @@ Does a compound system of small open-weight models, bounded by a deterministic P
 - Engineering detail: [`docs/tech-spec.md`](docs/tech-spec.md)
 - Decision log: [`docs/decisions.md`](docs/decisions.md)
 
-**Status:** Phase 1 (Build): skeleton, data download, `finance.py`, golden set, ground truth and noise injection done.
+**Status:** Phase 1 (Build): skeleton, data download, `finance.py`, golden set, ground truth, noise injection, contracts and few-shot examples done.
 
 ## Setup
 
@@ -49,6 +49,14 @@ python -m src.noise.inject
 ```
 
 Writes 15 variants (3 drift levels × 5 seeds, see `config/experiment.yaml`) to `data/noised/{level}/{seed}/`: `noised.csv` (some headers renamed, plus a free-text `carrier_notes` column), `header_map.json` (true header mapping) and `delay_facts.jsonl` (true facts per note). Committed; re-running gives identical files.
+
+## Build the few-shot examples
+
+```bash
+python -m src.fewshot
+```
+
+Combines the hand-written parts in `data/fewshot/spec.yaml` with 3 held-out DataCo rows and writes `data/fewshot/fewshot.json` (committed). Tests check that no example leaks a rename-pool header or a note template.
 
 ## Licence
 

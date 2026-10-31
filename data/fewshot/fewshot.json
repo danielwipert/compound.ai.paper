@@ -1,0 +1,650 @@
+[
+  {
+    "id": "FS1",
+    "situation": "late by 1 day, profitable, one carrier fact",
+    "input": {
+      "header": [
+        "order_id",
+        "order_item_id",
+        "SaleAmt",
+        "benefit_per_order",
+        "order_item_profit_ratio",
+        "order_item_quantity",
+        "real_ship_days",
+        "days_shipping_scheduled",
+        "delivery_status",
+        "late_delivery_risk",
+        "shipping_mode",
+        "order_status",
+        "category_name",
+        "order_region",
+        "order_date",
+        "shipping_date",
+        "carrier_notes"
+      ],
+      "csv": "order_id,order_item_id,SaleAmt,benefit_per_order,order_item_profit_ratio,order_item_quantity,real_ship_days,days_shipping_scheduled,delivery_status,late_delivery_risk,shipping_mode,order_status,category_name,order_region,order_date,shipping_date,carrier_notes\n52759,131900,129.9900055,3.630000114,0.029999999,1,2,1,Late delivery,1,First Class,COMPLETE,Men's Footwear,South America,2017-02-09T03:28,2017-02-11T03:28,Tyre blowout on the linehaul near Lima put the consignment 1 day behind plan.\n"
+    },
+    "fact_list": {
+      "order_item_id": 131900,
+      "facts": [
+        {
+          "key": "F1",
+          "field": "order_id",
+          "value": 52759,
+          "source": "BUS"
+        },
+        {
+          "key": "F2",
+          "field": "sales",
+          "value": 129.9900055,
+          "source": "BUS"
+        },
+        {
+          "key": "F3",
+          "field": "benefit_per_order",
+          "value": 3.630000114,
+          "source": "BUS"
+        },
+        {
+          "key": "F4",
+          "field": "order_item_profit_ratio",
+          "value": 0.029999999,
+          "source": "BUS"
+        },
+        {
+          "key": "F5",
+          "field": "order_item_quantity",
+          "value": 1,
+          "source": "BUS"
+        },
+        {
+          "key": "F6",
+          "field": "days_shipping_real",
+          "value": 2,
+          "source": "BUS"
+        },
+        {
+          "key": "F7",
+          "field": "days_shipping_scheduled",
+          "value": 1,
+          "source": "BUS"
+        },
+        {
+          "key": "F8",
+          "field": "delivery_status",
+          "value": "Late delivery",
+          "source": "BUS"
+        },
+        {
+          "key": "F9",
+          "field": "late_delivery_risk",
+          "value": 1,
+          "source": "BUS"
+        },
+        {
+          "key": "F10",
+          "field": "shipping_mode",
+          "value": "First Class",
+          "source": "BUS"
+        },
+        {
+          "key": "F11",
+          "field": "order_status",
+          "value": "COMPLETE",
+          "source": "BUS"
+        },
+        {
+          "key": "F12",
+          "field": "category_name",
+          "value": "Men's Footwear",
+          "source": "BUS"
+        },
+        {
+          "key": "F13",
+          "field": "order_region",
+          "value": "South America",
+          "source": "BUS"
+        },
+        {
+          "key": "F14",
+          "field": "order_date",
+          "value": "2017-02-09T03:28",
+          "source": "BUS"
+        },
+        {
+          "key": "F15",
+          "field": "shipping_date",
+          "value": "2017-02-11T03:28",
+          "source": "BUS"
+        },
+        {
+          "key": "F16",
+          "field": "cost_basis",
+          "value": 126.36,
+          "source": "BUS"
+        },
+        {
+          "key": "F17",
+          "field": "profit_ratio_recomputed",
+          "value": 0.0279,
+          "source": "BUS"
+        },
+        {
+          "key": "F18",
+          "field": "profit_ratio_delta",
+          "value": -0.0021,
+          "source": "BUS"
+        },
+        {
+          "key": "F19",
+          "field": "delay_days",
+          "value": 1,
+          "source": "BUS"
+        },
+        {
+          "key": "F20",
+          "field": "risk_class",
+          "value": "LATE",
+          "source": "BUS"
+        },
+        {
+          "key": "F21",
+          "field": "delay_fact_1.cause",
+          "value": "MECHANICAL",
+          "source": "NODE_B"
+        },
+        {
+          "key": "F22",
+          "field": "delay_fact_1.delay_days",
+          "value": 1,
+          "source": "NODE_B"
+        },
+        {
+          "key": "F23",
+          "field": "delay_fact_1.location",
+          "value": "Lima",
+          "source": "NODE_B"
+        }
+      ],
+      "digest": "2fcd3c9e130839898e88131d1e82449ab29d9ac121913441902db6f7a3ad550b"
+    },
+    "expected": {
+      "order_item_id": 131900,
+      "header_map": {
+        "order_id": "order_id",
+        "order_item_id": "order_item_id",
+        "SaleAmt": "sales",
+        "benefit_per_order": "benefit_per_order",
+        "order_item_profit_ratio": "order_item_profit_ratio",
+        "order_item_quantity": "order_item_quantity",
+        "real_ship_days": "days_shipping_real",
+        "days_shipping_scheduled": "days_shipping_scheduled",
+        "delivery_status": "delivery_status",
+        "late_delivery_risk": "late_delivery_risk",
+        "shipping_mode": "shipping_mode",
+        "order_status": "order_status",
+        "category_name": "category_name",
+        "order_region": "order_region",
+        "order_date": "order_date",
+        "shipping_date": "shipping_date"
+      },
+      "delay_facts": [
+        {
+          "cause": "MECHANICAL",
+          "secondary_cause": null,
+          "delay_hours": null,
+          "delay_days": 1,
+          "location": "Lima"
+        }
+      ],
+      "cost_basis": 126.36,
+      "profit_ratio_recomputed": 0.0279,
+      "delay_days": 1,
+      "risk_class": "LATE",
+      "report": "Risk class LATE [F20]: shipped in 2 days against 1 scheduled [F6][F7], a delay of 1 day [F19]. The carrier cites a mechanical fault near Lima [F21][F23]. Margin stayed positive: sales 129.99, cost basis 126.36, recomputed profit ratio 0.0279 [F2][F16][F17].",
+      "citations": [
+        "F20",
+        "F6",
+        "F7",
+        "F19",
+        "F21",
+        "F23",
+        "F2",
+        "F16",
+        "F17"
+      ],
+      "status": "OK",
+      "halt_reason": null
+    }
+  },
+  {
+    "id": "FS2",
+    "situation": "shipped early, loss-making, benign note",
+    "input": {
+      "header": [
+        "order_id",
+        "order_item_id",
+        "sales",
+        "ProfitOrd",
+        "order_item_profit_ratio",
+        "order_item_quantity",
+        "days_shipping_real",
+        "days_shipping_scheduled",
+        "delivery_status",
+        "late_delivery_risk",
+        "shipping_mode",
+        "order_state_code",
+        "Cat.",
+        "order_region",
+        "order_date",
+        "shipping_date",
+        "carrier_notes"
+      ],
+      "csv": "order_id,order_item_id,sales,ProfitOrd,order_item_profit_ratio,order_item_quantity,days_shipping_real,days_shipping_scheduled,delivery_status,late_delivery_risk,shipping_mode,order_state_code,Cat.,order_region,order_date,shipping_date,carrier_notes\n27617,69150,199.9900055,-48.0,-0.25,1,3,4,Advance shipping,0,Standard Class,CLOSED,Water Sports,South Asia,2016-02-08T03:06,2016-02-11T03:06,\"Arrived ahead of plan, nothing to flag.\"\n"
+    },
+    "fact_list": {
+      "order_item_id": 69150,
+      "facts": [
+        {
+          "key": "F1",
+          "field": "order_id",
+          "value": 27617,
+          "source": "BUS"
+        },
+        {
+          "key": "F2",
+          "field": "sales",
+          "value": 199.9900055,
+          "source": "BUS"
+        },
+        {
+          "key": "F3",
+          "field": "benefit_per_order",
+          "value": -48.0,
+          "source": "BUS"
+        },
+        {
+          "key": "F4",
+          "field": "order_item_profit_ratio",
+          "value": -0.25,
+          "source": "BUS"
+        },
+        {
+          "key": "F5",
+          "field": "order_item_quantity",
+          "value": 1,
+          "source": "BUS"
+        },
+        {
+          "key": "F6",
+          "field": "days_shipping_real",
+          "value": 3,
+          "source": "BUS"
+        },
+        {
+          "key": "F7",
+          "field": "days_shipping_scheduled",
+          "value": 4,
+          "source": "BUS"
+        },
+        {
+          "key": "F8",
+          "field": "delivery_status",
+          "value": "Advance shipping",
+          "source": "BUS"
+        },
+        {
+          "key": "F9",
+          "field": "late_delivery_risk",
+          "value": 0,
+          "source": "BUS"
+        },
+        {
+          "key": "F10",
+          "field": "shipping_mode",
+          "value": "Standard Class",
+          "source": "BUS"
+        },
+        {
+          "key": "F11",
+          "field": "order_status",
+          "value": "CLOSED",
+          "source": "BUS"
+        },
+        {
+          "key": "F12",
+          "field": "category_name",
+          "value": "Water Sports",
+          "source": "BUS"
+        },
+        {
+          "key": "F13",
+          "field": "order_region",
+          "value": "South Asia",
+          "source": "BUS"
+        },
+        {
+          "key": "F14",
+          "field": "order_date",
+          "value": "2016-02-08T03:06",
+          "source": "BUS"
+        },
+        {
+          "key": "F15",
+          "field": "shipping_date",
+          "value": "2016-02-11T03:06",
+          "source": "BUS"
+        },
+        {
+          "key": "F16",
+          "field": "cost_basis",
+          "value": 247.99,
+          "source": "BUS"
+        },
+        {
+          "key": "F17",
+          "field": "profit_ratio_recomputed",
+          "value": -0.24,
+          "source": "BUS"
+        },
+        {
+          "key": "F18",
+          "field": "profit_ratio_delta",
+          "value": 0.01,
+          "source": "BUS"
+        },
+        {
+          "key": "F19",
+          "field": "delay_days",
+          "value": -1,
+          "source": "BUS"
+        },
+        {
+          "key": "F20",
+          "field": "risk_class",
+          "value": "LOSS_MAKING",
+          "source": "BUS"
+        }
+      ],
+      "digest": "9de7266b2ac01f792c626581b330d639b4535d0142d3c4df9582783d1468008f"
+    },
+    "expected": {
+      "order_item_id": 69150,
+      "header_map": {
+        "order_id": "order_id",
+        "order_item_id": "order_item_id",
+        "sales": "sales",
+        "ProfitOrd": "benefit_per_order",
+        "order_item_profit_ratio": "order_item_profit_ratio",
+        "order_item_quantity": "order_item_quantity",
+        "days_shipping_real": "days_shipping_real",
+        "days_shipping_scheduled": "days_shipping_scheduled",
+        "delivery_status": "delivery_status",
+        "late_delivery_risk": "late_delivery_risk",
+        "shipping_mode": "shipping_mode",
+        "order_state_code": "order_status",
+        "Cat.": "category_name",
+        "order_region": "order_region",
+        "order_date": "order_date",
+        "shipping_date": "shipping_date"
+      },
+      "delay_facts": [],
+      "cost_basis": 247.99,
+      "profit_ratio_recomputed": -0.24,
+      "delay_days": -1,
+      "risk_class": "LOSS_MAKING",
+      "report": "Risk class LOSS_MAKING [F20]: benefit per order was -48.00 on sales of 199.99 [F3][F2], a recomputed profit ratio of -0.24 [F17]. Cost basis was 247.99 [F16]. Delivery was early: 3 days against 4 scheduled [F6][F7], with advance shipping status [F8].",
+      "citations": [
+        "F20",
+        "F3",
+        "F2",
+        "F17",
+        "F16",
+        "F6",
+        "F7",
+        "F8"
+      ],
+      "status": "OK",
+      "halt_reason": null
+    }
+  },
+  {
+    "id": "FS3",
+    "situation": "severe delay of 4 days, profitable, two carrier facts in mixed units",
+    "input": {
+      "header": [
+        "order_id",
+        "order_item_id",
+        "sales",
+        "benefit_per_order",
+        "pr_ratio",
+        "order_item_quantity",
+        "days_shipping_real",
+        "days_shipping_scheduled",
+        "dlvryStatus",
+        "late_delivery_risk",
+        "shipping_mode",
+        "order_status",
+        "category_name",
+        "order_region",
+        "order_date",
+        "ShipDate",
+        "carrier_notes"
+      ],
+      "csv": "order_id,order_item_id,sales,benefit_per_order,pr_ratio,order_item_quantity,days_shipping_real,days_shipping_scheduled,dlvryStatus,late_delivery_risk,shipping_mode,order_status,category_name,order_region,order_date,ShipDate,carrier_notes\n32295,80772,250.0,68.08000183,0.310000002,5,6,2,Late delivery,1,Second Class,PENDING,Women's Apparel,South of  USA ,2016-04-16T10:01,2016-04-22T10:01,\"Dock workers walked out at Savannah for 72 hrs, then customs flagged the paperwork for one more day.\"\n"
+    },
+    "fact_list": {
+      "order_item_id": 80772,
+      "facts": [
+        {
+          "key": "F1",
+          "field": "order_id",
+          "value": 32295,
+          "source": "BUS"
+        },
+        {
+          "key": "F2",
+          "field": "sales",
+          "value": 250.0,
+          "source": "BUS"
+        },
+        {
+          "key": "F3",
+          "field": "benefit_per_order",
+          "value": 68.08000183,
+          "source": "BUS"
+        },
+        {
+          "key": "F4",
+          "field": "order_item_profit_ratio",
+          "value": 0.310000002,
+          "source": "BUS"
+        },
+        {
+          "key": "F5",
+          "field": "order_item_quantity",
+          "value": 5,
+          "source": "BUS"
+        },
+        {
+          "key": "F6",
+          "field": "days_shipping_real",
+          "value": 6,
+          "source": "BUS"
+        },
+        {
+          "key": "F7",
+          "field": "days_shipping_scheduled",
+          "value": 2,
+          "source": "BUS"
+        },
+        {
+          "key": "F8",
+          "field": "delivery_status",
+          "value": "Late delivery",
+          "source": "BUS"
+        },
+        {
+          "key": "F9",
+          "field": "late_delivery_risk",
+          "value": 1,
+          "source": "BUS"
+        },
+        {
+          "key": "F10",
+          "field": "shipping_mode",
+          "value": "Second Class",
+          "source": "BUS"
+        },
+        {
+          "key": "F11",
+          "field": "order_status",
+          "value": "PENDING",
+          "source": "BUS"
+        },
+        {
+          "key": "F12",
+          "field": "category_name",
+          "value": "Women's Apparel",
+          "source": "BUS"
+        },
+        {
+          "key": "F13",
+          "field": "order_region",
+          "value": "South of  USA ",
+          "source": "BUS"
+        },
+        {
+          "key": "F14",
+          "field": "order_date",
+          "value": "2016-04-16T10:01",
+          "source": "BUS"
+        },
+        {
+          "key": "F15",
+          "field": "shipping_date",
+          "value": "2016-04-22T10:01",
+          "source": "BUS"
+        },
+        {
+          "key": "F16",
+          "field": "cost_basis",
+          "value": 181.92,
+          "source": "BUS"
+        },
+        {
+          "key": "F17",
+          "field": "profit_ratio_recomputed",
+          "value": 0.2723,
+          "source": "BUS"
+        },
+        {
+          "key": "F18",
+          "field": "profit_ratio_delta",
+          "value": -0.0377,
+          "source": "BUS"
+        },
+        {
+          "key": "F19",
+          "field": "delay_days",
+          "value": 4,
+          "source": "BUS"
+        },
+        {
+          "key": "F20",
+          "field": "risk_class",
+          "value": "SEVERE_LATE",
+          "source": "BUS"
+        },
+        {
+          "key": "F21",
+          "field": "delay_fact_1.cause",
+          "value": "LABOUR",
+          "source": "NODE_B"
+        },
+        {
+          "key": "F22",
+          "field": "delay_fact_1.delay_hours",
+          "value": 72,
+          "source": "NODE_B"
+        },
+        {
+          "key": "F23",
+          "field": "delay_fact_1.location",
+          "value": "Savannah",
+          "source": "NODE_B"
+        },
+        {
+          "key": "F24",
+          "field": "delay_fact_2.cause",
+          "value": "CUSTOMS",
+          "source": "NODE_B"
+        },
+        {
+          "key": "F25",
+          "field": "delay_fact_2.delay_days",
+          "value": 1,
+          "source": "NODE_B"
+        }
+      ],
+      "digest": "7107f6f77e335c32a630437017687f61dc678cc52cf4e0c5add15c4eaac69019"
+    },
+    "expected": {
+      "order_item_id": 80772,
+      "header_map": {
+        "order_id": "order_id",
+        "order_item_id": "order_item_id",
+        "sales": "sales",
+        "benefit_per_order": "benefit_per_order",
+        "pr_ratio": "order_item_profit_ratio",
+        "order_item_quantity": "order_item_quantity",
+        "days_shipping_real": "days_shipping_real",
+        "days_shipping_scheduled": "days_shipping_scheduled",
+        "dlvryStatus": "delivery_status",
+        "late_delivery_risk": "late_delivery_risk",
+        "shipping_mode": "shipping_mode",
+        "order_status": "order_status",
+        "category_name": "category_name",
+        "order_region": "order_region",
+        "order_date": "order_date",
+        "ShipDate": "shipping_date"
+      },
+      "delay_facts": [
+        {
+          "cause": "LABOUR",
+          "secondary_cause": null,
+          "delay_hours": 72,
+          "delay_days": null,
+          "location": "Savannah"
+        },
+        {
+          "cause": "CUSTOMS",
+          "secondary_cause": null,
+          "delay_hours": null,
+          "delay_days": 1,
+          "location": null
+        }
+      ],
+      "cost_basis": 181.92,
+      "profit_ratio_recomputed": 0.2723,
+      "delay_days": 4,
+      "risk_class": "SEVERE_LATE",
+      "report": "Risk class SEVERE_LATE [F20]: shipped in 6 days against 2 scheduled [F6][F7], a delay of 4 days [F19]. The carrier reports a labour stoppage at Savannah lasting 72 hours [F21][F23][F22], followed by a customs hold of 1 day [F24][F25]. The order is still profitable, with cost basis 181.92 on sales of 250.00 [F16][F2].",
+      "citations": [
+        "F20",
+        "F6",
+        "F7",
+        "F19",
+        "F21",
+        "F23",
+        "F22",
+        "F24",
+        "F25",
+        "F16",
+        "F2"
+      ],
+      "status": "OK",
+      "halt_reason": null
+    }
+  }
+]
